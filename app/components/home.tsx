@@ -4,7 +4,7 @@ import Image from "next/image";
 const Home = () => {
   return (
     <>
-      <div className="flex h-[910px]  justify-between px-[15rem] bg-[url('/images/HomeBG.png')] bg-cover bg-center">
+      <div className="flex h-[910px]  justify-between px-[15rem] bg-[url('/images/newbg.png')] bg-cover bg-center">
         <div className="flex justify-center items-start flex-col space-y-5">
           <p className="text-3xl font-bold">Hi, I am</p>
           <p className="text-8xl font-bold">John Rey Silverio</p>
@@ -13,17 +13,25 @@ const Home = () => {
           </p>
           <div className="h-[10rem] w-full">
             <div className="flex w-[45%] justify-between items-center mt-[10rem]">
-              <button className="bg-gray-200 p-2 shadow-md rounded-md">
+              <a
+                href="https://x.com/JReySilverio"
+                target="_blank"
+                className="bg-gray-200 p-2 shadow-md rounded-md"
+              >
                 <Image
-                  src="/images/arroba.png"
+                  src="/images/twitter.png"
                   alt="arroba"
                   width={40}
                   height={40}
                   className="cursor-pointer"
                 />
-              </button>
+              </a>
 
-              <button className="bg-gray-200 p-2 shadow-md rounded-md">
+              <a
+                href="https://github.com/johnreysilverio"
+                target="_blank"
+                className="bg-gray-200 p-2 shadow-md rounded-md"
+              >
                 <Image
                   src="/images/github.png"
                   alt="github"
@@ -31,9 +39,13 @@ const Home = () => {
                   height={40}
                   className="cursor-pointer"
                 />
-              </button>
+              </a>
 
-              <button className="bg-gray-200 p-2 shadow-md rounded-md">
+              <a
+                href="https://linkedin.com/in/jrsilverio17"
+                target="_blank"
+                className="bg-gray-200 p-2 shadow-md rounded-md"
+              >
                 <Image
                   src="/images/linkedin.png"
                   alt="linked in"
@@ -41,16 +53,16 @@ const Home = () => {
                   height={40}
                   className="cursor-pointer"
                 />
-              </button>
+              </a>
             </div>
           </div>
         </div>
-        <div className="">
+        <div className="flex items-end">
           <Image
-            src="/images/profilepic.jpg"
+            src="/images/newprofilepic.png"
             alt="profile pic"
-            width={700}
-            height={400}
+            width={1000}
+            height={600}
           />
         </div>
       </div>
