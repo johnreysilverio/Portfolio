@@ -9,6 +9,7 @@ import Skills from "./components/skills";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
 import Image from "next/image";
+
 const Portfolio = () => {
   return (
     <>

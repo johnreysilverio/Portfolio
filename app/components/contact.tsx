@@ -18,25 +18,25 @@ const Contact = () => {
         <input
           type="text"
           placeholder="Enter your Name*"
-          id="name"
+          id="visitor-name"
           className="border-l-4 border-black text-2xl my-10 p-2 w-[45rem] rounded"
         ></input>
         <input
           type="email"
           placeholder="Enter your Email*"
-          id="email"
+          id="visitor-email"
           className="border-l-4 border-black text-2xl my-10 p-2 w-[45rem] rounded"
         ></input>
         <input
           type="number"
           placeholder="Enter your Number*"
-          id="name"
+          id="visitor-num"
           className="border-l-4 border-black text-2xl my-10 p-2 w-[45rem] rounded"
         ></input>
         <textarea
           rows={2}
           placeholder="Enter Message"
-          id="name"
+          id="visitor-msg"
           className=" border-l-4 border-black text-2xl my-10 p-2 w-[45rem] rounded"
         ></textarea>
         <button className="border-x-4 border-black px-20 py-2 text-xl my-10">
