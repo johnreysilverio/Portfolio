@@ -8,7 +8,7 @@ const Navbar = () => {
         className="w-full flex justify-center p-0 sticky top-0 z-50"
       >
         <div className="w-[1700px] flex justify-between items-center py-5">
-          <div className="bg-white bg-opacity-70 p-1">
+          <div className="bg-white rounded bg-opacity-70 p-1">
             <Image
               src="/images/JRSilverio Logo.png"
               alt="JRSilverio Logo"
