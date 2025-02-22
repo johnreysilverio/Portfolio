@@ -2,9 +2,9 @@
 import React from "react";
 
 const Contact = () => {
-  async function handleSubmit(event) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.currentTarget);
 
     formData.append("access_key", "d31dd9e0-3b50-4ffe-a3a8-c47fd0323773");
 
