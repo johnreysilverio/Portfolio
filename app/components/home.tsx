@@ -4,7 +4,7 @@ import Image from "next/image";
 const Home = () => {
   return (
     <>
-      <div className="h-[910px] bg-[url('/images/NEWERBG.png')] bg-cover bg-center flex justify-center">
+      <div className="h-[910px] bg-[url('/images/NEWERBG.png')] bg-cover bg-center flex justify-center mt-[-148px]">
         <div className="w-[1500px] h-[910px] flex justify-between">
           <div className="flex justify-center p-1">
             <div className="flex justify-center items-start flex-col space-y-5">
