@@ -4,9 +4,12 @@ import Image from "next/image";
 const Home = () => {
   return (
     <>
-      <div className="h-[910px] bg-[url('/images/NEWERBG.png')] bg-cover bg-center flex justify-center mt-[-148px]">
+      <div
+        id="home"
+        className="h-[910px] bg-[url('/images/NEWERBG.png')] bg-cover bg-center flex justify-center mt-[-148px]"
+      >
         <div className="w-[1500px] h-[910px] flex justify-between">
-          <div className="flex justify-center p-1">
+          <div className="w-[45%] flex justify-center p-1">
             <div className="flex justify-center items-start flex-col space-y-5">
               <p className="text-3xl font-bold">Hi, I am</p>
               <p className="text-8xl font-bold">John Rey Silverio</p>
@@ -18,7 +21,7 @@ const Home = () => {
                   <a
                     href="https://x.com/JReySilverio"
                     target="_blank"
-                    className="bg-gray-200 p-2 shadow-md rounded-md"
+                    className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300"
                   >
                     <Image
                       src="/images/twitter.png"
@@ -32,7 +35,7 @@ const Home = () => {
                   <a
                     href="https://github.com/johnreysilverio"
                     target="_blank"
-                    className="bg-gray-200 p-2 shadow-md rounded-md"
+                    className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300"
                   >
                     <Image
                       src="/images/github.png"
@@ -46,7 +49,7 @@ const Home = () => {
                   <a
                     href="https://linkedin.com/in/jrsilverio17"
                     target="_blank"
-                    className="bg-gray-200 p-2 shadow-md rounded-md"
+                    className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300"
                   >
                     <Image
                       src="/images/linkedin.png"
@@ -60,7 +63,15 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-end items-end">
+          <div className="w-[10%] flex justify-center items-end ">
+            <p className="text-white text-6xl">--</p>
+            <div className="flex flex-col relative justify-start items-center animate-bounce">
+              <p className="absolute text-white text-2xl mt-[4px]">V</p>
+              <p className="text-white text-6xl">V</p>
+            </div>
+            <p className="text-white text-6xl">--</p>
+          </div>
+          <div className="w-[45%] flex justify-end items-end">
             <div>
               <Image
                 src="/images/newprofilepic.png"

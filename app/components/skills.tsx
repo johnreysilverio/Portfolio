@@ -21,28 +21,28 @@ const Skills = () => {
                 alt="html"
                 width={200}
                 height={200}
-                className="cursor-pointer"
+                className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-10 rounded-md"
               />
               <Image
                 src="/images/css.png"
                 alt="css"
                 width={200}
                 height={200}
-                className="cursor-pointer"
+                className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-10 rounded-md"
               />
               <Image
                 src="/images/javascript.png"
                 alt="javascript"
                 width={200}
                 height={200}
-                className="cursor-pointer"
+                className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-10 rounded-md"
               />
               <Image
                 src="/images/git.png"
                 alt="git bash"
                 width={200}
                 height={200}
-                className="cursor-pointer"
+                className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-10 rounded-md"
               />
             </div>
           </div>
@@ -59,28 +59,28 @@ const Skills = () => {
                 alt="next js"
                 width={200}
                 height={200}
-                className="cursor-pointer"
+                className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-10 rounded-md"
               />
               <Image
                 src="/images/tailwindcss.png"
                 alt="Tailwind Css"
                 width={200}
                 height={200}
-                className="cursor-pointer"
+                className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-10 rounded-md"
               />
               <Image
                 src="/images/typescript.png"
                 alt="typescript"
                 width={200}
                 height={200}
-                className="cursor-pointer"
+                className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-10 rounded-md"
               />
               <Image
                 src="/images/NestJS.png"
                 alt="Nest JS"
                 width={200}
                 height={200}
-                className="cursor-pointer"
+                className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-10 rounded-md"
               />
             </div>
           </div>
@@ -97,28 +97,28 @@ const Skills = () => {
                 alt="c sharp"
                 width={200}
                 height={200}
-                className="cursor-pointer"
+                className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-10 rounded-md"
               />
               <Image
                 src="/images/cplusplus.png"
                 alt="c plus plus"
                 width={200}
                 height={200}
-                className="cursor-pointer"
+                className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-10 rounded-md"
               />
               <Image
                 src="/images/python.png"
                 alt="python"
                 width={200}
                 height={200}
-                className="cursor-pointer"
+                className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-10 rounded-md"
               />
               <Image
                 src="/images/java.png"
                 alt="java"
                 width={200}
                 height={200}
-                className="cursor-pointer"
+                className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-10 rounded-md"
               />
             </div>
           </div>

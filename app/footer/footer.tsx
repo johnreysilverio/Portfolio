@@ -7,28 +7,41 @@ import { MdOutlineEmail } from "react-icons/md";
 const Footer = () => {
   return (
     <div className="w-full bg-[#1A1A1A] flex flex-col items-center justify-center">
-      <a className="px-20 py-2 text-2xl text-gray-200 my-5" href="#home">
-        Back to Top
+      <a
+        href="#home"
+        className="hover:bg-[#2F2F2F] hover:bg-opacity-70 mt-[1rem] p-[1rem] rounded-xl"
+      >
+        <div className="flex flex-col justify-center items-center">
+          <div className="flex justify-center items-end pt-[10px]">
+            <p className="text-white text-6xl">--</p>
+            <div className="flex flex-col relative justify-start items-center animate-bounce">
+              <p className="absolute text-white text-2xl mt-[20px] ">^</p>
+              <p className="text-white text-6xl">^</p>
+            </div>
+            <p className="text-white text-6xl">--</p>
+          </div>
+          <p className="text-2xl text-gray-200">Back to Top</p>
+        </div>
       </a>
-      <div className="flex my-5 gap-5">
+      <div className="flex mt-[10px] gap-5">
         <a
           href="https://www.facebook.com/john.rey.jose.silverio"
           target="_blank"
-          className="cursor-pointer"
+          className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-70 rounded-md"
         >
           <AiOutlineFacebook className="text-white text-5xl" />
         </a>
         <a
           href="https://linkedin.com/in/jrsilverio17"
           target="_blank"
-          className="cursor-pointer"
+          className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-70 rounded-md"
         >
           <CiLinkedin className="text-white text-5xl" />
         </a>
         <a
           href="https://www.instagram.com/slverio.jr/?igsh=MTFuOTZnaWN1dzYwcQ%3D%3D#"
           target="_blank"
-          className="cursor-pointer"
+          className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-70 rounded-md"
         >
           <FaInstagram className="text-white text-5xl" />
         </a>
@@ -36,12 +49,12 @@ const Footer = () => {
           href="https://mail.google.com/mail/?view=cm&fs=1&to=johnrey.silverio.p@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="cursor-pointer"
+          className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-70 rounded-md"
         >
           <MdOutlineEmail className="text-white text-5xl" />
         </a>
       </div>
-      <p className="px-20 py-2 text-2xl text-gray-200 my-5">
+      <p className="px-20 py-2 text-2xl text-gray-200">
         @2025 John Rey Silverio All Rights Reserve
       </p>
     </div>

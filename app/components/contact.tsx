@@ -50,14 +50,14 @@ const Contact = () => {
                 type="text"
                 name="name"
                 placeholder="Enter your Name*"
-                className="border-l-4 border-black text-2xl my-5 p-2 w-[45rem] rounded"
+                className="border-l-4 border-black text-2xl my-5 py-2 px-[1rem] w-[45rem] rounded"
               ></input>
               <input
                 required
                 type="email"
                 name="email"
                 placeholder="Enter your Email*"
-                className="border-l-4 border-black text-2xl my-5 p-2 w-[45rem] rounded"
+                className="border-l-4 border-black text-2xl my-5 py-2 px-[1rem] w-[45rem] rounded"
               ></input>
 
               <textarea
@@ -65,9 +65,9 @@ const Contact = () => {
                 rows={2}
                 placeholder="Enter Message"
                 name="message"
-                className=" border-l-4 border-black text-2xl my-5 p-2 w-[45rem] rounded"
+                className=" border-l-4 border-black text-2xl my-5 py-2 px-[1rem] w-[45rem] rounded"
               ></textarea>
-              <button className="border-x-4 border-black px-20 py-2 text-xl mt-5 mb-20">
+              <button className="border-x-4 border-black px-20 py-2 px-[1rem] text-xl mt-5 mb-20 hover:bg-[#2F2F2F] hover:bg-opacity-10">
                 SUBMIT
               </button>
             </div>
