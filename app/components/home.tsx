@@ -8,82 +8,89 @@ const Home = () => {
         id="home"
         className="h-[910px] bg-[url('/images/NEWERBG.png')] bg-cover bg-center flex justify-center mt-[-148px]"
       >
-        <div className="w-[1500px] h-[910px] flex justify-between">
-          <div className="w-[45%] flex justify-center p-1">
-            <div className="flex justify-center items-start flex-col space-y-5">
-              <p className="text-3xl font-bold">Hi, I am</p>
-              <p className="text-8xl font-bold">John Rey Silverio</p>
-              <p className="text-2xl font-bold text-gray-400">
-                Bachelor in Science in Information Technology - HCDC
-              </p>
-              <div className="h-[10rem] w-full">
-                <div className="flex w-[45%] justify-between items-center mt-[10rem]">
-                  <a
-                    href="https://x.com/JReySilverio"
-                    target="_blank"
-                    className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300 transition-all"
-                  >
-                    <Image
-                      src="/images/twitter.png"
-                      alt="arroba"
-                      width={40}
-                      height={40}
-                      className="cursor-pointer"
-                    />
-                  </a>
+        <div className="w-[1500px] h-[910px] flex flex-col justify-between items-center relative">
+          <div className="w-full h-full flex">
+            <div className="w-[50%] flex justify-center p-1">
+              <div className="flex justify-center items-start flex-col space-y-5">
+                <p className="text-3xl font-bold">Hi, I am</p>
+                <p className="text-8xl font-bold">John Rey Silverio</p>
+                <p className="text-2xl font-bold text-gray-400">
+                  Bachelor in Science in Information Technology - HCDC
+                </p>
+                <div className="h-[10rem] w-full">
+                  <div className="flex w-[45%] justify-between items-center mt-[10rem]">
+                    <a
+                      href="https://x.com/JReySilverio"
+                      target="_blank"
+                      className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300 transition-all"
+                    >
+                      <Image
+                        src="/images/twitter.png"
+                        alt="arroba"
+                        width={40}
+                        height={40}
+                        className="cursor-pointer"
+                      />
+                    </a>
 
-                  <a
-                    href="https://github.com/johnreysilverio"
-                    target="_blank"
-                    className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300 transition-all"
-                  >
-                    <Image
-                      src="/images/github.png"
-                      alt="github"
-                      width={40}
-                      height={40}
-                      className="cursor-pointer"
-                    />
-                  </a>
+                    <a
+                      href="https://github.com/johnreysilverio"
+                      target="_blank"
+                      className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300 transition-all"
+                    >
+                      <Image
+                        src="/images/github.png"
+                        alt="github"
+                        width={40}
+                        height={40}
+                        className="cursor-pointer"
+                      />
+                    </a>
 
-                  <a
-                    href="https://linkedin.com/in/jrsilverio17"
-                    target="_blank"
-                    className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300 transition-all"
-                  >
-                    <Image
-                      src="/images/linkedin.png"
-                      alt="linked in"
-                      width={40}
-                      height={40}
-                      className="cursor-pointer"
-                    />
-                  </a>
+                    <a
+                      href="https://linkedin.com/in/jrsilverio17"
+                      target="_blank"
+                      className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300 transition-all"
+                    >
+                      <Image
+                        src="/images/linkedin.png"
+                        alt="linked in"
+                        width={40}
+                        height={40}
+                        className="cursor-pointer"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="w-[10%] flex justify-center items-end ">
-            <p className="text-white text-6xl">--</p>
-            <div className="flex flex-col relative justify-start items-center animate-bounce">
-              <p className="absolute text-white text-2xl mt-[4px]">V</p>
-              <p className="text-white text-6xl">V</p>
+
+            <div className="w-[50%] flex justify-end items-end">
+              <div>
+                <Image
+                  src="/images/newprofilepic.png"
+                  alt="profile pic"
+                  width={1000}
+                  height={600}
+                />
+              </div>
             </div>
-            <p className="text-white text-6xl">--</p>
           </div>
-          <div className="w-[45%] flex justify-end items-end">
-            <div>
-              <Image
-                src="/images/newprofilepic.png"
-                alt="profile pic"
-                width={1000}
-                height={600}
-              />
-            </div>
+          <div className="absolute mt-[51rem]">
+            <a href="#intro" 
+               className="flex justify-center border-2 border-lime-500 p-2 rounded-full bg-[#191919] bg-opacity-90 cursor-pointer hover:bg-gray-700 hover:bg-opacity-90 hover:border-lime-200 hover:border-4 transition-all">
+              <p className="text-white text-6xl text-center">-- </p>
+              <div className="flex flex-col relative justify-start items-center animate-bounce">
+                <p className="absolute text-lime-500 text-2xl mt-[4px]">V</p>
+                <p className="text-lime-400 text-6xl">V</p>
+              </div>
+              <p className="text-white text-6xl">--</p>
+            </a>
           </div>
         </div>
       </div>
-      <div className="bg-[#1D1D1D] w-full h-[550px] py-10 flex justify-center overflow-hidden relative">
+      <div id="intro"
+           className="bg-[#1D1D1D] w-full h-[550px] py-10 flex justify-center overflow-hidden relative">
         <div className="flex w-[1700px] justify-center">
           <div className="space-y-10 w-[55%]">
             <p className="text-white text-6xl">Holy Cross of Davao College</p>
