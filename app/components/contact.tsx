@@ -1,7 +1,12 @@
 "use client";
 import React from "react";
+import { useState } from "react";
 
 const Contact = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -22,7 +27,10 @@ const Contact = () => {
     const result = await response.json();
     if (result.success) {
       console.log(result);
-      window.alert("Message Sent Successfuly");
+      window.alert("Message Sent Successfully");
+      setName("");
+      setEmail("");
+      setMessage("");
     } else {
       window.alert("Message Sent Failed, Please Try Again Later");
     }
@@ -47,6 +55,10 @@ const Contact = () => {
             <div className="w-full flex flex-col justify-center items-center px-[20rem]">
               <input
                 required
+                value={name}
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
                 type="text"
                 name="name"
                 placeholder="Enter your Name*"
@@ -54,6 +66,10 @@ const Contact = () => {
               ></input>
               <input
                 required
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
                 type="email"
                 name="email"
                 placeholder="Enter your Email*"
@@ -62,12 +78,18 @@ const Contact = () => {
 
               <textarea
                 required
+                value={message}
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
                 rows={2}
                 placeholder="Enter Message"
                 name="message"
                 className=" border-l-4 border-black text-2xl my-5 py-2 px-[1rem] w-[45rem] rounded"
               ></textarea>
-              <button className="border-x-4 border-black px-20 py-2 px-[1rem] text-xl mt-5 mb-20 hover:bg-[#2F2F2F] hover:bg-opacity-10">
+              <button
+                className="border-x-4 border-black px-20 py-2 px-[1rem] text-xl mt-5 mb-20 hover:bg-[#2F2F2F] hover:bg-opacity-10"
+              >
                 SUBMIT
               </button>
             </div>
