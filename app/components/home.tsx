@@ -21,7 +21,7 @@ const Home = () => {
                   <a
                     href="https://x.com/JReySilverio"
                     target="_blank"
-                    className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300"
+                    className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300 transition-all"
                   >
                     <Image
                       src="/images/twitter.png"
@@ -35,7 +35,7 @@ const Home = () => {
                   <a
                     href="https://github.com/johnreysilverio"
                     target="_blank"
-                    className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300"
+                    className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300 transition-all"
                   >
                     <Image
                       src="/images/github.png"
@@ -49,7 +49,7 @@ const Home = () => {
                   <a
                     href="https://linkedin.com/in/jrsilverio17"
                     target="_blank"
-                    className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300"
+                    className="bg-gray-200 p-2 shadow-md rounded-md hover:bg-gray-300 transition-all"
                   >
                     <Image
                       src="/images/linkedin.png"

@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="w-full bg-[#1A1A1A] flex flex-col items-center justify-center">
       <a
         href="#home"
-        className="hover:bg-[#2F2F2F] hover:bg-opacity-70 mt-[1rem] p-[1rem] rounded-xl"
+        className="hover:bg-[#3F3F3F] hover:bg-opacity-70 mt-[1rem] p-[1rem] rounded-xl transition-all"
       >
         <div className="flex flex-col justify-center items-center">
           <div className="flex justify-center items-end pt-[10px]">
@@ -27,21 +27,21 @@ const Footer = () => {
         <a
           href="https://www.facebook.com/john.rey.jose.silverio"
           target="_blank"
-          className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-70 rounded-md"
+          className="cursor-pointer hover:bg-[#3F3F3F] hover:bg-opacity-70 rounded-md transition-all"
         >
           <AiOutlineFacebook className="text-white text-5xl" />
         </a>
         <a
           href="https://linkedin.com/in/jrsilverio17"
           target="_blank"
-          className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-70 rounded-md"
+          className="cursor-pointer hover:bg-[#3F3F3F] hover:bg-opacity-70 rounded-md transition-all"
         >
           <CiLinkedin className="text-white text-5xl" />
         </a>
         <a
           href="https://www.instagram.com/slverio.jr/?igsh=MTFuOTZnaWN1dzYwcQ%3D%3D#"
           target="_blank"
-          className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-70 rounded-md"
+          className="cursor-pointer hover:bg-[#3F3F3F] hover:bg-opacity-70 rounded-md transition-all"
         >
           <FaInstagram className="text-white text-5xl" />
         </a>
@@ -49,7 +49,7 @@ const Footer = () => {
           href="https://mail.google.com/mail/?view=cm&fs=1&to=johnrey.silverio.p@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="cursor-pointer hover:bg-[#2F2F2F] hover:bg-opacity-70 rounded-md"
+          className="cursor-pointer hover:bg-[#3F3F3F] hover:bg-opacity-70 rounded-md transition-all"
         >
           <MdOutlineEmail className="text-white text-5xl" />
         </a>
