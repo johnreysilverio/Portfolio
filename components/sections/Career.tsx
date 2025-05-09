@@ -57,7 +57,7 @@ const Career = () => {
             }}
           >
             <p className="text-text text-[36px]">EXPERIENCE</p>
-            <div className="w-full grid grid-cols-2 3xl:grid-cols-4 gap-3 3xl:gap-4 grid-flow-dense">
+            <div className="w-full grid grid-cols-2 gap-3 3xl:gap-4 grid-flow-dense">
               {displayedExperiences.map((experience, index) => (
                 <Card
                   key={index}
@@ -87,7 +87,7 @@ const Career = () => {
             }}
           >
             <p className="text-text text-[36px]">CERTIFICATE</p>
-            <div className="w-full grid grid-cols-2 3xl:grid-cols-4 gap-3 3xl:gap-4 grid-flow-dense">
+            <div className="w-full grid grid-cols-2 gap-3 3xl:gap-4 grid-flow-dense">
               {displayedCertificates.map((certificate, index) => (
                 <Card
                   key={index}

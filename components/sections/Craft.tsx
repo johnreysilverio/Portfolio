@@ -48,7 +48,7 @@ const Craft = () => {
             }}
           >
             <p className="text-text text-[36px]">SKILLS</p>
-            <div className="w-full grid grid-cols-2 gap-3 3xl:grid-cols-4 3xl:gap-4 grid-flow-dense">
+            <div className="w-full grid grid-cols-2 gap-3 3xl:gap-4 grid-flow-dense">
               {displayedSkills.map((skill, index) => (
                 <Card
                   key={index}
@@ -76,7 +76,7 @@ const Craft = () => {
             }}
           >
             <p className="text-text text-[36px]">PROJECTS</p>
-            <div className="w-full grid grid-cols-2 gap-3 3xl:grid-cols-4 3xl:gap-4 grid-flow-dense">
+            <div className="w-full grid grid-cols-2 gap-3 3xl:gap-4 grid-flow-dense">
               {displayedProjects.map((project, index) => (
                 <Card
                   key={index}

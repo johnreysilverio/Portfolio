@@ -43,11 +43,11 @@ const Hero = () => {
           </div>
           <div className="flex justify-center items-center col-span-2 md:col-span-1 ">
             <Image
-              src="/svg/dark-mode/twitter-dark.svg"
-              width={277}
-              height={277}
+              src="/png/PortfolioHero.png"
+              width={1000}
+              height={1000}
               alt="JR Logo"
-              className=""
+              className="xl:w-[30rem]"
             />
           </div>
         </div>

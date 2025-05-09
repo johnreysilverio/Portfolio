@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import ButtonType1 from "../../components/buttons/ButtonType1";
+import AboutPicsAnimation from "../Animation/AboutPicsAnimation";
 
 const About: React.FC = () => {
   const handleSmoothScroll = (id: string) => {
@@ -48,18 +48,12 @@ const About: React.FC = () => {
           </a>
         </div>
 
-        <div className="relative col-span-2 md:col-span-1 h-[400px] sm:h-[500px] w-full flex justify-center items-center">
+        <div className="relative col-span-2 md:col-span-1 aspect-[785/500] w-full flex justify-center items-center">
           <div className="absolute inset-0 overflow-hidden pl-10 pb-10">
-            <div className="h-full w-full"></div>
+            <div className="h-full w-full bg-highlight"></div>
           </div>
           <div className="absolute inset-0 overflow-hidden mt-10 mr-10">
-            <Image
-              src="/svg/dark-mode/twitter-dark.svg"
-              width={277}
-              height={277}
-              alt="JR Logo"
-              className="z-10 h-full w-full"
-            />
+            <AboutPicsAnimation />
           </div>
         </div>
       </div>
