@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import ButtonType2 from "../../components/buttons/ButtonType2";
+import SecondaryButton from "../buttons/SecondaryButton";
 import Card from "../../components/card/Card";
 import { skills, projects } from "@/lib/cardData";
 import { fillArrayToLength } from "@/lib/fillArrayToLength";
@@ -61,7 +61,7 @@ const Craft = () => {
                 />
               ))}
             </div>
-            <ButtonType2
+            <SecondaryButton
               text={showMoreSkills ? "SHOW LESS" : "SHOW MORE"}
               onClick={handleShowMoreSkills}
             />
@@ -91,7 +91,7 @@ const Craft = () => {
                 />
               ))}
             </div>
-            <ButtonType2
+            <SecondaryButton
               text={showMoreProjects ? "SHOW LESS" : "SHOW MORE"}
               onClick={handleShowMoreProjects}
             />

@@ -3,12 +3,12 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 
-interface ButtonType3Props {
+interface IconButtonProps {
   className?: string;
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>; // type for an icon component
 }
 
-const ButtonType3: React.FC<ButtonType3Props> = ({ className = "", Icon }) => {
+const IconButton: React.FC<IconButtonProps> = ({ className = "", Icon }) => {
   return (
     <Button
       variant="outline"
@@ -29,4 +29,4 @@ const ButtonType3: React.FC<ButtonType3Props> = ({ className = "", Icon }) => {
   );
 };
 
-export default ButtonType3;
+export default IconButton;

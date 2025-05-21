@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import ButtonType1 from "../../components/buttons/ButtonType1";
+import MainButton from "../buttons/MainButton";
 import AboutPicsAnimation from "../Animation/AboutPicsAnimation";
 
 const About: React.FC = () => {
@@ -44,7 +44,7 @@ const About: React.FC = () => {
               handleSmoothScroll("contact");
             }}
           >
-            <ButtonType1 text="Contact Me" />
+            <MainButton text="Contact Me" />
           </a>
         </div>
 

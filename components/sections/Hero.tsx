@@ -2,8 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import ButtonType1 from "../../components/buttons/ButtonType1";
-import ButtonType3 from "../../components/buttons/ButtonType3";
+import MainButton from "../buttons/MainButton";
+import IconButtons from "../buttons/IconButton";
 import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
@@ -24,20 +24,20 @@ const Hero = () => {
             <div className="flex flex-col gap-5 md:gap-10">
               <div className="flex w-full justify-between items-center">
                 <a href="https://x.com/JReySilverio" target="_blank">
-                  <ButtonType3 Icon={FaTwitter} />
+                  <IconButtons Icon={FaTwitter} />
                 </a>
                 <a href="https://github.com/johnreysilverio" target="_blank">
-                  <ButtonType3 Icon={FaGithub} />
+                  <IconButtons Icon={FaGithub} />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/jrsilverio17/"
                   target="_blank"
                 >
-                  <ButtonType3 Icon={FaLinkedin} />
+                  <IconButtons Icon={FaLinkedin} />
                 </a>
               </div>
               <a href="/others/downloadcv.pdf" target="_blank">
-                <ButtonType1 text="Download CV" />
+                <MainButton text="Download CV" />
               </a>
             </div>
           </div>

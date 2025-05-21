@@ -3,7 +3,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 
-const buttonType1 = ({ text = "" }) => {
+const MainButton = ({ text = "" }) => {
   return (
     <Button
       variant="default"
@@ -16,4 +16,4 @@ const buttonType1 = ({ text = "" }) => {
   );
 };
 
-export default buttonType1;
+export default MainButton;

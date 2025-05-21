@@ -3,12 +3,12 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 
-interface ButtonType4Props {
+interface SeeMoreButtonProps {
   componentSource: string;
   onOpenModal: (source: string) => void;
 }
 
-const ButtonType4: React.FC<ButtonType4Props> = ({
+const SeeMoreButton: React.FC<SeeMoreButtonProps> = ({
   componentSource,
   onOpenModal,
 }) => {
@@ -35,4 +35,4 @@ const ButtonType4: React.FC<ButtonType4Props> = ({
   );
 };
 
-export default ButtonType4;
+export default SeeMoreButton;

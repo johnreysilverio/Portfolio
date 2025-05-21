@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import ButtonType2 from "../../components/buttons/ButtonType2";
+import SecondaryButton from "../buttons/SecondaryButton";
 import Card from "../../components/card/Card";
 import { experience, certificates } from "@/lib/cardData";
 import { fillArrayToLength } from "@/lib/fillArrayToLength";
@@ -72,7 +72,7 @@ const Career = () => {
                 />
               ))}
             </div>
-            <ButtonType2
+            <SecondaryButton
               text={showMoreExperiences ? "SHOW LESS" : "SHOW MORE"}
               onClick={handleShowMoreExperiences}
             />
@@ -102,7 +102,7 @@ const Career = () => {
                 />
               ))}
             </div>
-            <ButtonType2
+            <SecondaryButton
               text={showMoreCertificates ? "SHOW LESS" : "SHOW MORE"}
               onClick={handleShowMoreCertificates}
             />

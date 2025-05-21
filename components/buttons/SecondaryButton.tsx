@@ -3,12 +3,15 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 
-interface ButtonType2Props {
+interface SecondaryButtonProps {
   text: string;
   onClick?: () => void; // Add the onClick prop here
 }
 
-const buttonType2: React.FC<ButtonType2Props> = ({ text = "", onClick }) => {
+const SecondaryButton: React.FC<SecondaryButtonProps> = ({
+  text = "",
+  onClick,
+}) => {
   return (
     <Button
       variant="default"
@@ -22,4 +25,4 @@ const buttonType2: React.FC<ButtonType2Props> = ({ text = "", onClick }) => {
   );
 };
 
-export default buttonType2;
+export default SecondaryButton;

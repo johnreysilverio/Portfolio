@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ButtonType2 from "../../components/buttons/ButtonType2";
+import SecondaryButton from "../buttons/SecondaryButton";
 import {
   FaUser,
   FaEnvelope,
@@ -60,7 +60,6 @@ const Contact = () => {
               </div>
               <div className="w-full shadow-md/30 rounded-xl">
                 <Image
-                  //test
                   src="/png/location.png"
                   width={2000}
                   height={2000}
@@ -122,7 +121,7 @@ const Contact = () => {
               ></textarea>
             </div>
             <div className="xl:pt-2">
-              <ButtonType2 text="SEND MESSAGE" />
+              <SecondaryButton text="SEND MESSAGE" />
             </div>
           </div>
         </div>

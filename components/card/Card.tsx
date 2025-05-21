@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import ButtonType4 from "../buttons/ButtonType4";
+import SeeMoreButton from "../buttons/SeeMoreButton";
 
 interface CardProps {
   title?: string;
@@ -64,7 +64,7 @@ const Card: React.FC<CardProps> = ({
           >
             {title}
           </p>
-          <ButtonType4
+          <SeeMoreButton
             componentSource={componentSource}
             onOpenModal={openModal}
           />
