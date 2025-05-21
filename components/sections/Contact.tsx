@@ -14,7 +14,7 @@ const Contact = () => {
           CONTACT
         </p>
         <div className="grid grid-cols-2 items-center gap-2 mt-5">
-          <div className="flex flex-col gap-5 col-span-2 xl:col-span-1 xl:order-2 xl:px-30">
+          <div className="flex flex-col gap-5 col-span-2 xl:col-span-1 xl:order-2 xl:px-30 py-3">
             <p className="text-text text-center text-[32px] sm:text-[36px] font-bold">
               Reach Out
             </p>
