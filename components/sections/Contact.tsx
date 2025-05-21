@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Web3Form from "./Web3Form";
+import GetInTouch from "./GetInTouch";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
@@ -64,7 +64,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="col-span-2 xl:col-span-1 xl:order-1">
-            <Web3Form />
+            <GetInTouch />
           </div>
         </div>
       </div>

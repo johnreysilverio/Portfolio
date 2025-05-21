@@ -5,7 +5,7 @@ import type { FormEvent } from "react";
 import SecondaryButton from "../buttons/SecondaryButton";
 import { FaUser, FaEnvelope, FaPhoneAlt, FaCommentDots } from "react-icons/fa";
 
-const Web3Form = () => {
+const GetInTouch = () => {
   const [rows, setRows] = useState(4);
   const formRef = useRef<HTMLFormElement | null>(null);
   const [status, setStatus] = useState<"success" | "error" | null>(null);
@@ -142,4 +142,4 @@ const Web3Form = () => {
   );
 };
 
-export default Web3Form;
+export default GetInTouch;
