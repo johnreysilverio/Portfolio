@@ -42,7 +42,7 @@ const Career = () => {
 
   return (
     <div
-      className="bg-background1 bg-cover bg-center min-h-screen flex justify-center items-center px-10 pb-10 pt-[90px]"
+      className="bg-background1 bg-cover bg-center min-h-screen flex justify-center items-center px-10 pb-10 pt-[50px] transition-all duration-200"
       id="career"
     >
       <div className="w-[417px] sm:w-[746px] md:w-[1280px] 3xl:w-[1650px] h-full z-10 flex flex-col items-center justify-center">
@@ -56,7 +56,7 @@ const Career = () => {
               transition: "flex 0.5s ease-in-out",
             }}
           >
-            <p className="text-text text-[36px]">EXPERIENCE</p>
+            <p className="text-text text-[36px] font-semibold">EXPERIENCE</p>
             <div className="w-full grid grid-cols-2 gap-3 3xl:gap-4 grid-flow-dense">
               {displayedExperiences.map((experience, index) => (
                 <Card
@@ -86,7 +86,7 @@ const Career = () => {
               transition: "flex 0.5s ease-in-out",
             }}
           >
-            <p className="text-text text-[36px]">CERTIFICATE</p>
+            <p className="text-text text-[36px] font-semibold">CERTIFICATE</p>
             <div className="w-full grid grid-cols-2 gap-3 3xl:gap-4 grid-flow-dense">
               {displayedCertificates.map((certificate, index) => (
                 <Card

@@ -14,7 +14,7 @@ const AboutPicsAnimation = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);

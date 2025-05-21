@@ -63,7 +63,7 @@ const Contact = () => {
                   src="/png/MAPS.png"
                   width={2000}
                   height={2000}
-                  alt="JR Logo"
+                  alt="Location"
                   className="w-full bg-component1 rounded-xl border border-highlight p-2"
                 />
               </div>

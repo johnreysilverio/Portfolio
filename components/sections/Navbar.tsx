@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
             className="3xl:w-[65px]"
           />
 
-          <ul className="text-text list-none hidden sm:gap-5 sm:flex md:gap-10 lg:justify-center">
+          <ul className="text-text list-none hidden sm:flex lg:justify-center">
             {["home", "about", "craft", "career", "contact"].map((section) => (
               <li key={section}>
                 <a

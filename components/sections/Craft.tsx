@@ -33,7 +33,7 @@ const Craft = () => {
 
   return (
     <div
-      className="bg-background1 bg-cover bg-center min-h-screen flex justify-center items-center px-10 pb-10 pt-[90px] transition-all duration-200"
+      className="bg-background1 bg-cover bg-center min-h-screen flex justify-center items-center px-10 pb-10 pt-[50px] transition-all duration-200"
       id="craft"
     >
       <div className="w-[417px] sm:w-[746px] md:w-[1280px] 3xl:w-[1650px] h-full z-10 flex flex-col items-center justify-center">
@@ -47,7 +47,7 @@ const Craft = () => {
               transition: "flex 0.5s ease-in-out",
             }}
           >
-            <p className="text-text text-[36px]">SKILLS</p>
+            <p className="text-text text-[36px] font-semibold">SKILLS</p>
             <div className="w-full grid grid-cols-2 gap-3 3xl:gap-4 grid-flow-dense">
               {displayedSkills.map((skill, index) => (
                 <Card
@@ -75,7 +75,7 @@ const Craft = () => {
               transition: "flex 0.5s ease-in-out",
             }}
           >
-            <p className="text-text text-[36px]">PROJECTS</p>
+            <p className="text-text text-[36px] font-semibold">PROJECTS</p>
             <div className="w-full grid grid-cols-2 gap-3 3xl:gap-4 grid-flow-dense">
               {displayedProjects.map((project, index) => (
                 <Card
