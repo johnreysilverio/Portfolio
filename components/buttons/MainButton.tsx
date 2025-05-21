@@ -7,9 +7,9 @@ const MainButton = ({ text = "" }) => {
   return (
     <Button
       variant="default"
-      className="bg-highlight dark:bg-highlight hover:bg-highlight/75 hover:dark:bg-highlight/75 flex justify-center rounded-xl p-5 sm:p-8 3xl:p-10 shadow-md/30"
+      className="bg-component2 dark:bg-component2 hover:bg-highlight/75 hover:dark:bg-highlight/75 border-1 border-highlight flex justify-center rounded-md px-10 py-6 shadow-md/30"
     >
-      <p className="text-[24px] sm:text-[32px] text-constantText text-center font-bold leading-none">
+      <p className="text-[20px] 3xl:text-[24px] text-highlight font-medium text-constantText text-center leading-none">
         {text}
       </p>
     </Button>

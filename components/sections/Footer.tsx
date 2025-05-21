@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import IconButtons from "../buttons/IconButton";
+import FooterButton from "../buttons/FooterButton";
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -18,20 +18,20 @@ const Footer = () => {
             href="https://web.facebook.com/john.rey.jose.silverio"
             target="_blank"
           >
-            <IconButtons Icon={FaFacebookF} className="w-[35px] rounded-md" />
+            <FooterButton Icon={FaFacebookF} />
           </a>
           <a href="https://www.linkedin.com/in/jrsilverio17/" target="_blank">
-            <IconButtons Icon={FaLinkedinIn} className="w-[35px] rounded-md" />
+            <FooterButton Icon={FaLinkedinIn} />
           </a>
           <a href="https://www.instagram.com/slverio.jr/" target="_blank">
-            <IconButtons Icon={FaInstagram} className="w-[35px] rounded-md" />
+            <FooterButton Icon={FaInstagram} />
           </a>
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=johnrey.silverio.p@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IconButtons Icon={FaEnvelope} className="w-[35px] rounded-md" />
+            <FooterButton Icon={FaEnvelope} />
           </a>
         </div>
         <p className="text-text text-[16px]">

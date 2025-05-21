@@ -8,22 +8,15 @@ interface IconButtonProps {
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>; // type for an icon component
 }
 
-const IconButton: React.FC<IconButtonProps> = ({ className = "", Icon }) => {
+const IconButton: React.FC<IconButtonProps> = ({ Icon }) => {
   return (
     <Button
       variant="outline"
       size="icon"
-      className={`p-2 ${
-        className
-          ? className
-          : "w-[50px] h-[50px] sm:w-[55px] sm:h-[55px] lg:w-[60px] lg:h-[60px] 3xl:w-[65px] 3xl:h-[65px] rounded-xl"
-      } bg-component1 flex justify-center items-center border-2 border-highlight dark:border-highlight shadow-md/30`}
-      onClick={() => console.log("test")}
+      className={`p-2 w-[35px] h-[35px] 3xl:w-[50px] 3xl:h-[50px] rounded-md bg-component1 flex justify-center items-center border-2 border-highlight dark:border-highlight shadow-md/30`}
     >
       {Icon && (
-        <Icon
-          className={`absolute ${className ? "" : "!w-10 !h-10"} text-text`}
-        />
+        <Icon className={`absolute text-text 3xl:!w-[24px] 3xl:!h-[24px]`} />
       )}
     </Button>
   );

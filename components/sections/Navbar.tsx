@@ -20,14 +20,14 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="w-full h-[80px] sm:h-[65px] 3xl:h-[90px] bg-component1 flex justify-center fixed top-0 z-50 border-border1 border-b-2 px-10 transition-all duration-200">
+      <div className="w-full h-[50px] sm:h-[65px] 3xl:h-[90px] bg-component1 flex justify-center fixed top-0 z-50 border-border1 border-b-2 px-10 transition-all duration-200">
         <div className="w-[417px] sm:w-[746px] md:w-[1280px] 3xl:w-[1650px] flex items-center justify-between relative">
           <Image
             src="/svg/JR Logo.svg"
-            width={50}
-            height={50}
+            width={1000}
+            height={1000}
             alt="JR Logo"
-            className="3xl:w-[65px]"
+            className="w-[40px] md:w-[45px] 3xl:w-[55px]"
           />
 
           <ul className="text-text list-none hidden sm:flex lg:justify-center">
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
               setIsOpen(!isOpen);
             }}
           >
-            <FaBars className="text-text !w-10 !h-10" />
+            <FaBars className="text-text !w-7 !h-7" />
           </Button>
         </div>
       </div>

@@ -19,7 +19,7 @@ const SeeMoreButton: React.FC<SeeMoreButtonProps> = ({
   return (
     <div>
       <Button
-        className="flex justify-center items-center rounded-4xl p-3 3xl:p-4 bg-transparent hover:bg-transparent"
+        className="flex justify-center items-center shadow-none rounded-4xl p-3 3xl:p-4 bg-transparent hover:bg-transparent"
         onClick={handleClick}
         disabled={!componentSource ? true : false}
       >
