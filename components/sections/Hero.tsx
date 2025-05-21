@@ -15,11 +15,14 @@ const Hero = () => {
     >
       <div className="w-[417px] sm:w-[746px] md:w-[1280px] 3xl:w-[1650px] h-full z-10 flex justify-center">
         <div className="w-full flex flex-col justify-center items-center gap-10 md:gap-15 3xl:gap-20">
-          <div className="flex flex-col text-center text-[35px] sm:text-[75px] 3xl:text-[100px]">
-            <p className="text-highlight">
+          <div className="flex flex-col text-center ">
+            <p className="text-highlight text-[35px] sm:text-[75px] 3xl:text-[100px]">
               Building the web,
               <br />
               one line of code at a time.
+            </p>
+            <p className="text-text text-[16px] sm:text-[24px] 3xl:text-[32px]">
+              Turning ideas into experience and pixels into purpose.
             </p>
           </div>
           <div className="flex w-full justify-center items-center gap-5">

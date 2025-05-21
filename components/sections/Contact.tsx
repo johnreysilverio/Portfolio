@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import SecondaryButton from "../buttons/SecondaryButton";
 import {
@@ -10,6 +12,22 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => {
+  const [rows, setRows] = useState(4);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 120rem)"); // Tailwind's 3xl breakpoint
+    const handleResize = () => {
+      setRows(mediaQuery.matches ? 7 : 4);
+    };
+
+    handleResize(); // Run on mount
+    mediaQuery.addEventListener("change", handleResize);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleResize);
+    };
+  }, []);
+
   return (
     <div
       className="min-h-screen w-full bg-background2 flex justify-center items-center px-10 pt-13 pb-10 transition-all duration-200"
@@ -69,7 +87,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="bg-component1 w-full h-full p-3 rounded-xl flex flex-col gap-4 3xl:gap-8 items-center col-span-2 xl:col-span-1 xl:order-1 shadow-md/30 transition-all duration-200">
+          <div className="bg-component1 w-full h-full p-3 rounded-xl flex flex-col gap-4 3xl:gap-4 items-center col-span-2 xl:col-span-1 xl:order-1 shadow-md/30 transition-all duration-200">
             <div className="text-text text-center">
               <p className="text-[32px] font-bold">Get in Touch</p>
               <p className="text-[16px] mt-3 3xl:mt-5">
@@ -115,7 +133,7 @@ const Contact = () => {
                 <FaCommentDots className="absolute !w-7 !h-7 text-text" />
               </div>
               <textarea
-                rows={4}
+                rows={rows}
                 className="w-full text-text text-[16px] resize-none"
                 placeholder="Message"
               ></textarea>

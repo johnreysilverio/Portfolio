@@ -21,16 +21,39 @@ const Footer = () => {
 
   return (
     <div className="w-full bg-background2 flex flex-col justify-center items-center border-border2 border-t-2">
-      <div className="w-full flex justify-center items-center py-10">
-        <div className="w-[417px] sm:w-[746px] md:w-[1280px] 3xl:w-[1650px] flex justify-between">
+      <div className="px-10 w-full flex justify-center items-center py-10">
+        <div className="w-[417px] sm:w-[746px] md:w-[1280px] 3xl:w-[1650px] grid sm:grid-cols-3 flex-col sm:flex-row gap-10 sm:gap-0 justify-between items-center sm:items-start">
           <div className="flex flex-col gap-5">
-            <p>Quick Links</p>
-            <div className="flex flex-col gap-2">
+            <p className="text-center sm:text-left">Contacts</p>
+            <div className="flex flex-col text-center sm:text-left gap-1">
+              <div>
+                <p>
+                  <span className="text-highlight">Phone: </span>+63 930 629
+                  7787
+                </p>
+              </div>
+              <div>
+                <p>
+                  <span className="text-highlight">Email: </span>
+                  johnrey.silverio.p@gmail.com
+                </p>
+              </div>
+              <div>
+                <p>
+                  <span className="text-highlight">Availability: </span>
+                  Available for freelance
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-5">
+            <p className="text-center">Quick Links</p>
+            <div className="flex flex-row sm:flex-col items-center text-center gap-2">
               {links.map((link) => (
                 <a
                   key={link}
                   href={`#${link.toLowerCase()}`}
-                  className="text-text hover:text-highlight text-[16px]"
+                  className="text-text hover:text-highlight sm:w-[5rem] text-[16px]"
                   onClick={(e) => {
                     e.preventDefault();
                     handleSmoothScroll(link.toLowerCase());
@@ -41,23 +64,8 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <div className="flex flex-col gap-5">
-            <p>Contacts</p>
-            <div className="flex flex-col gap-1">
-              <p>
-                <span className="text-highlight">Phone: </span>+63 930 629 7787
-              </p>
-              <p>
-                <span className="text-highlight">Email: </span>
-                johnrey.silverio.p@gmail.com
-              </p>
-              <p>
-                <span className="text-highlight">Location: </span>
-                Davao City
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col items-end text-end gap-5">
+
+          <div className="flex flex-col items-center sm:items-end text-center sm:text-end gap-5">
             <Image
               src="/svg/JR Logo.svg"
               width={1000}
@@ -67,9 +75,9 @@ const Footer = () => {
             />
 
             <p className="text-text text-[16px]">
-              Building the web, one line of code at a time
+              Building the web, one line of code at a time.
               <br />
-              turning ideas into experiences and pixels into purpose.
+              Turning ideas into experiences and pixels into purpose.
             </p>
 
             <div className="flex gap-5 items-center">
