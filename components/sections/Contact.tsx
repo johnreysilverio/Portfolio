@@ -61,7 +61,7 @@ const Contact = () => {
               <div className="w-full shadow-md/30 rounded-xl">
                 <Image
                   //test
-                  src="/png/MAPS.png"
+                  src="/png/location.png"
                   width={2000}
                   height={2000}
                   alt="Location"
