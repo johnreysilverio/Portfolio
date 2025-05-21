@@ -1,33 +1,9 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import SecondaryButton from "../buttons/SecondaryButton";
-import {
-  FaUser,
-  FaEnvelope,
-  FaPhoneAlt,
-  FaCommentDots,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
+
+import Web3Form from "./Web3Form";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
-  const [rows, setRows] = useState(4);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 120rem)"); // Tailwind's 3xl breakpoint
-    const handleResize = () => {
-      setRows(mediaQuery.matches ? 7 : 4);
-    };
-
-    handleResize(); // Run on mount
-    mediaQuery.addEventListener("change", handleResize);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleResize);
-    };
-  }, []);
-
   return (
     <div
       className="min-h-screen w-full bg-background2 flex justify-center items-center px-10 pt-13 pb-10 transition-all duration-200"
@@ -37,7 +13,7 @@ const Contact = () => {
         <p className="text-highlight text-[40px] sm:text-[48px] font-bold">
           CONTACT
         </p>
-        <div className="grid grid-cols-2 items-center gap-5 mt-5">
+        <div className="grid grid-cols-2 items-center gap-2 mt-5">
           <div className="flex flex-col gap-5 col-span-2 xl:col-span-1 xl:order-2 xl:px-30">
             <p className="text-text text-center text-[32px] sm:text-[36px] font-bold">
               Reach Out
@@ -87,60 +63,8 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="bg-component1 w-full h-full p-3 rounded-xl flex flex-col gap-4 3xl:gap-4 items-center col-span-2 xl:col-span-1 xl:order-1 shadow-md/30 transition-all duration-200">
-            <div className="text-text text-center">
-              <p className="text-[32px] font-bold">Get in Touch</p>
-              <p className="text-[16px] mt-3 3xl:mt-5">
-                Get in touch with me for any kind of help. I am here to give you
-                the best and also here to help you to find your projects.
-              </p>
-            </div>
-            <div className="bg-component2 rounded-md flex p-2 gap-2 xl:p-3 xl:gap-2 3xl:p-5 3xl:gap-5 shadow-md/30 w-full mt-3 3xl:mt-5">
-              <div className="flex justify-center items-center w-[24px] h-[24px] p-2">
-                <FaUser className="absolute !w-7 !h-7 text-text" />
-              </div>
-              <input
-                type="text"
-                className="w-full text-text text-[16px]"
-                placeholder="Your Name"
-              ></input>
-            </div>
-
-            <div className="bg-component2 rounded-md flex p-2 gap-2 xl:p-3 xl:gap-2 3xl:p-5 3xl:gap-5 shadow-md/30 w-full">
-              <div className="flex justify-center items-center w-[24px] h-[24px] p-2">
-                <FaEnvelope className="absolute !w-7 !h-7 text-text" />
-              </div>
-              <input
-                type="email"
-                className="w-full text-text text-[16px]"
-                placeholder="Your Email"
-              ></input>
-            </div>
-
-            <div className="bg-component2 rounded-md flex p-2 gap-2 xl:p-3 xl:gap-2 3xl:p-5 3xl:gap-5 shadow-md/30 w-full">
-              <div className="flex justify-center items-center w-[24px] h-[24px] p-2">
-                <FaPhoneAlt className="absolute !w-7 !h-7 text-text" />
-              </div>
-              <input
-                type="tel"
-                className="w-full text-text text-[16px]"
-                placeholder="Phone Number"
-              ></input>
-            </div>
-
-            <div className="bg-component2 rounded-md flex p-2 gap-2 xl:p-3 xl:gap-2 3xl:p-5 3xl:gap-5 shadow-md/30 justify-start items-start w-full">
-              <div className="flex justify-center items-center w-[24px] h-[24px] p-2">
-                <FaCommentDots className="absolute !w-7 !h-7 text-text" />
-              </div>
-              <textarea
-                rows={rows}
-                className="w-full text-text text-[16px] resize-none"
-                placeholder="Message"
-              ></textarea>
-            </div>
-            <div className="xl:pt-2">
-              <SecondaryButton text="SEND MESSAGE" />
-            </div>
+          <div className="col-span-2 xl:col-span-1 xl:order-1">
+            <Web3Form />
           </div>
         </div>
       </div>
