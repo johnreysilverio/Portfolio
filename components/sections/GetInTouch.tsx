@@ -13,7 +13,7 @@ const GetInTouch = () => {
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 1900px)");
     const handleResize = () => {
-      setRows(mediaQuery.matches ? 7 : 5);
+      setRows(mediaQuery.matches ? 7 : 6);
     };
 
     handleResize();
