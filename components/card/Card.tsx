@@ -43,8 +43,8 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <div
-      className={`bg-component2 flex flex-col p-3 rounded-md text-text text-start gap-3 overflow-hidden relative group shadow-md/30 transition-all duration-300 ${className}`}
-      style={style} // Apply dynamic styles here
+      className={`bg-component2 flex flex-col p-3 rounded-md text-text text-start gap-3 overflow-hidden relative group shadow-md/30 border-2 border-transparent hover:border-highlight transition-all duration-300 ${className}`}
+      style={style}
     >
       {isValidSrc(imageSource) && (
         <Image

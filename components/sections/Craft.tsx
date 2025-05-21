@@ -38,7 +38,7 @@ const Craft = () => {
     >
       <div className="w-[417px] sm:w-[746px] md:w-[1280px] 3xl:w-[1650px] h-full z-10 flex flex-col items-center justify-center">
         <p className="text-[48px] text-highlight font-bold ">CRAFTS</p>
-        <div className="flex flex-col xl:flex-row w-full text-center gap-3 mt-5 transition-all duration-500">
+        <div className="flex flex-col xl:flex-row w-full text-center gap-2 mt-5 transition-all duration-500">
           {/* Skills Section */}
           <div
             className={`flex flex-col items-center gap-5 bg-component1 rounded-xl p-3 shadow-md/30 transition-all duration-500 ease-in-out overflow-hidden`}
