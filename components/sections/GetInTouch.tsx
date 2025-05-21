@@ -78,7 +78,7 @@ const GetInTouch = () => {
           <input
             name="name"
             type="text"
-            className="w-full text-text text-[16px] 3xl:text-[20px] p-2 3xl:p-3"
+            className="w-full text-text text-[16px] 3xl:text-[20px] p-2 3xl:p-3 outline-0"
             placeholder="Your Name"
             required
           />
@@ -91,7 +91,7 @@ const GetInTouch = () => {
           <input
             name="email"
             type="email"
-            className="w-full text-text text-[16px] 3xl:text-[20px] p-2 3xl:px-3"
+            className="w-full text-text text-[16px] 3xl:text-[20px] p-2 3xl:px-3 outline-0"
             placeholder="Your Email"
             required
           />
@@ -104,7 +104,7 @@ const GetInTouch = () => {
           <input
             name="phone"
             type="tel"
-            className="w-full text-text text-[16px] 3xl:text-[20px] p-2 3xl:px-3"
+            className="w-full text-text text-[16px] 3xl:text-[20px] p-2 3xl:px-3 outline-0"
             placeholder="Phone Number"
             required
           />
@@ -117,7 +117,7 @@ const GetInTouch = () => {
           <textarea
             name="message"
             rows={rows}
-            className="w-full text-text text-[16px] 3xl:text-[20px] resize-none p-2 3xl:p-3"
+            className="w-full text-text text-[16px] 3xl:text-[20px] resize-none p-2 3xl:p-3 outline-0"
             placeholder="Message"
             required
           ></textarea>
