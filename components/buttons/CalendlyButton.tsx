@@ -4,8 +4,16 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 
 const CalendlyButton = ({ text = "" }) => {
+  const handleClick = () => {
+    window.open(
+      "https://calendly.com/johnrey-silverio-p/solo-meeting",
+      "_blank"
+    );
+  };
+
   return (
     <Button
+      onClick={handleClick}
       variant="default"
       className="bg-component2 dark:bg-component2 hover:bg-highlight/75 hover:dark:bg-highlight/75 border-1 border-component2 flex justify-center rounded-md px-10 py-6 shadow-md/30"
     >
