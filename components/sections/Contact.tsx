@@ -63,7 +63,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 xl:col-span-1 xl:order-1">
+          <div className="col-span-2 xl:col-span-1 xl:order-1 h-full">
             <GetInTouch />
           </div>
         </div>
