@@ -58,7 +58,7 @@ const Card: React.FC<CardProps> = ({
       <div className="relative z-10">
         <div className="flex justify-between">
           <p
-            className={`text-[24px] font-medium truncate ${
+            className={`text-[18px] sm:text-[24px] font-medium truncate ${
               title === "empty" ? "text-transparent" : "text-text"
             }`}
           >
@@ -70,7 +70,7 @@ const Card: React.FC<CardProps> = ({
           />
         </div>
         <p
-          className={`text-[16px] truncate ${
+          className={`text-[14px] sm:text-[16px] truncate ${
             description === "empty" ? "text-transparent" : "text-text"
           }`}
         >

@@ -107,7 +107,9 @@ const Craft = () => {
       id="craft"
     >
       <div className="w-full max-w-[417px] sm:max-w-[746px] md:max-w-[1280px] 3xl:max-w-[1650px] h-full z-10 flex flex-col items-center justify-center">
-        <p className="text-[48px] text-highlight font-bold">CRAFTS</p>
+        <p className="text-[36px] sm:text-[48px] text-highlight font-bold">
+          CRAFTS
+        </p>
 
         {/* Tablet and Desktop View */}
         <div className="hidden sm:flex w-full text-center gap-2 mt-5 transition-all duration-500">
@@ -180,7 +182,7 @@ const Craft = () => {
             className="flex flex-col items-center gap-5 bg-component1 rounded-xl p-3 shadow-md/30"
             ref={skillsRef}
           >
-            <p className="text-text text-[28px] font-semibold">SKILLS</p>
+            <p className="text-text text-[24px] font-semibold">SKILLS</p>
             <div className="w-full flex flex-col gap-3 3xl:gap-4">
               {mobileDisplayedSkills.map((skill, index) => (
                 <Card
@@ -211,7 +213,7 @@ const Craft = () => {
             className="flex flex-col items-center gap-5 bg-component1 rounded-xl p-3 shadow-md/30"
             ref={projectsRef}
           >
-            <p className="text-text text-[28px] font-semibold">PROJECTS</p>
+            <p className="text-text text-[24px] font-semibold">PROJECTS</p>
             <div className="w-full flex flex-col gap-3 3xl:gap-4">
               {mobileDisplayedProjects.map((project, index) => (
                 <Card

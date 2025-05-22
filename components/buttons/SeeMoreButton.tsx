@@ -24,7 +24,7 @@ const SeeMoreButton: React.FC<SeeMoreButtonProps> = ({
         disabled={!componentSource ? true : false}
       >
         <p
-          className={`text-[16px] 3xl:text-[20px] font-normal border-b-2 border-transparent hover:border-highlight transition-all duration-300 ease-in-out ${
+          className={`text-[14px] sm:text-[16px] font-normal border-b-2 border-transparent hover:border-highlight transition-all duration-300 ease-in-out ${
             !componentSource ? "text-transparent" : "text-text"
           }`}
         >
