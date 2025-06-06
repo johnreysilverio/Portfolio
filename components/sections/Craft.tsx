@@ -103,11 +103,11 @@ const Craft = () => {
 
   return (
     <div
-      className="bg-background1 bg-cover bg-center min-h-screen flex justify-center items-center px-10 pb-10 pt-[50px] transition-all duration-200"
+      className="min-h-screen flex justify-center items-center px-10 transition-all duration-200"
       id="craft"
     >
       <div className="w-full max-w-[417px] sm:max-w-[746px] md:max-w-[1280px] 3xl:max-w-[1650px] h-full z-10 flex flex-col items-center justify-center">
-        <p className="text-[36px] sm:text-[48px] text-highlight font-bold">
+        <p className="text-[36px] sm:text-[48px] text-highlight font-bold mt-10">
           CRAFTS
         </p>
 

@@ -20,7 +20,7 @@ const Footer = () => {
   const links = ["HOME", "ABOUT", "CRAFT", "CAREER", "CONTACT"];
 
   return (
-    <div className="w-full bg-background2 flex flex-col justify-center items-center border-border2 border-t-2">
+    <div className="w-full bg-background2 flex flex-col justify-center items-center border-border2 border-t-2 text-text">
       <div className="px-10 w-full flex justify-center items-center py-10">
         <div className="w-[417px] sm:w-[746px] md:w-[1280px] 3xl:w-[1650px] grid sm:grid-cols-3 flex-col sm:flex-row gap-10 sm:gap-0 justify-between items-center sm:items-start">
           <div className="flex flex-col gap-5">

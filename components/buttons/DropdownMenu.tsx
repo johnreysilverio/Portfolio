@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { ThemeToggle } from "@/app/theme-toggle";
+//import { ThemeToggle } from "@/app/theme-toggle";
 import NavbarButton from "../buttons/NavbarButton";
 
 interface DropdownMenuProps {
@@ -42,9 +42,9 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ isOpen, onClose }) => {
             </a>
           </li>
         ))}
-        <li>
+        {/* <li>
           <ThemeToggle />
-        </li>
+        </li> */}
       </ul>
     </div>
   );
