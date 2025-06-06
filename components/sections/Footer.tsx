@@ -3,7 +3,7 @@
 import React from "react";
 import FooterButton from "../buttons/FooterButton";
 import {
-  FaFacebookF,
+  /* FaFacebookF, */
   FaLinkedinIn,
   FaInstagram,
   FaEnvelope,
@@ -81,12 +81,12 @@ const Footer = () => {
             </p>
 
             <div className="flex gap-5 items-center">
-              <a
+              {/* <a
                 href="https://web.facebook.com/john.rey.jose.silverio"
                 target="_blank"
               >
                 <FooterButton Icon={FaFacebookF} />
-              </a>
+              </a> */}
               <a
                 href="https://www.linkedin.com/in/jrsilverio17/"
                 target="_blank"
