@@ -19,7 +19,22 @@
   --color-constantText: rgba(var(--constantText));
   --color-highlight: rgba(var(--highlight));
 }
+html,
+body {
+  overflow: auto;
 
+  /* Firefox */
+  scrollbar-width: none;
+
+  /* IE and Edge */
+  -ms-overflow-style: none;
+}
+
+/* Chrome, Safari, Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
 :root {
   --constantText: 236, 236, 236;
   --highlight: 76, 175, 80;
