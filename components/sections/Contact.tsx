@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import GetInTouch from "./GetInTouch";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
@@ -13,12 +12,16 @@ const Contact = () => {
         <p className="text-highlight text-[40px] sm:text-[48px] font-bold">
           CONTACT
         </p>
+
         <div className="grid grid-cols-2 items-center gap-2 mt-5">
+          {/* Left Side - Contact Info */}
           <div className="flex flex-col gap-5 col-span-2 xl:col-span-1 xl:order-2 xl:px-30 py-3">
             <p className="text-text text-center text-[32px] sm:text-[36px] font-bold">
               Reach Out
             </p>
+
             <div className="flex flex-col gap-3 3xl:gap-5">
+              {/* Phone */}
               <div className="flex gap-5 md:gap-10">
                 <div className="flex justify-center items-center w-[48px] h-[48px] bg-component2 rounded-xl p-2">
                   <FaPhoneAlt className="absolute !w-8 !h-8 text-text" />
@@ -28,6 +31,8 @@ const Contact = () => {
                   <p>+63 930 629 7787</p>
                 </div>
               </div>
+
+              {/* Email */}
               <div className="flex gap-5 md:gap-10">
                 <div className="flex justify-center items-center w-[48px] h-[48px] bg-component2 rounded-xl p-2">
                   <FaEnvelope className="absolute !w-8 !h-8 text-text" />
@@ -37,6 +42,8 @@ const Contact = () => {
                   <p className="underline">johnrey.silverio.p@gmail.com</p>
                 </div>
               </div>
+
+              {/* Location */}
               <div className="flex gap-5 md:gap-10">
                 <div className="flex justify-center items-center w-[48px] h-[48px] bg-component2 rounded-xl p-2">
                   <FaMapMarkerAlt className="absolute !w-8 !h-8 text-text" />
@@ -52,6 +59,8 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
+
+              {/* Map Image */}
               <div className="w-full shadow-md/30 rounded-xl">
                 <Image
                   src="/png/location.png"
@@ -63,6 +72,8 @@ const Contact = () => {
               </div>
             </div>
           </div>
+
+          {/* Right Side - Get In Touch Form */}
           <div className="col-span-2 xl:col-span-1 xl:order-1 h-full">
             <GetInTouch />
           </div>

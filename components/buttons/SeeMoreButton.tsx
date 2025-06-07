@@ -16,22 +16,22 @@ const SeeMoreButton: React.FC<SeeMoreButtonProps> = ({
     onOpenModal(componentSource);
   };
 
+  const isDisabled = componentSource.trim() === "";
+
   return (
-    <div>
-      <Button
-        className="flex justify-center items-center shadow-none rounded-4xl p-3 3xl:p-4 bg-transparent hover:bg-transparent"
-        onClick={handleClick}
-        disabled={!componentSource ? true : false}
+    <Button
+      className="flex justify-center items-center shadow-none rounded-4xl p-3 3xl:p-4 bg-transparent hover:bg-transparent"
+      onClick={handleClick}
+      disabled={isDisabled}
+    >
+      <p
+        className={`text-[14px] sm:text-[16px] font-normal border-b-2 border-transparent hover:border-highlight transition-all duration-300 ease-in-out ${
+          isDisabled ? "text-transparent" : "text-text"
+        }`}
       >
-        <p
-          className={`text-[14px] sm:text-[16px] font-normal border-b-2 border-transparent hover:border-highlight transition-all duration-300 ease-in-out ${
-            !componentSource ? "text-transparent" : "text-text"
-          }`}
-        >
-          See More
-        </p>
-      </Button>
-    </div>
+        See More
+      </p>
+    </Button>
   );
 };
 

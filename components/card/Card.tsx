@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+import ReactDOM from "react-dom";
 import SeeMoreButton from "../buttons/SeeMoreButton";
 
 interface CardProps {
@@ -10,7 +12,7 @@ interface CardProps {
   componentSource?: string;
   imageSource?: string;
   className?: string;
-  style?: React.CSSProperties; // Adding style prop for dynamic styling
+  style?: React.CSSProperties;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -19,27 +21,90 @@ const Card: React.FC<CardProps> = ({
   componentSource = "",
   imageSource = "",
   className = "",
-  style = {}, // Default empty object for style prop
+  style = {},
 }) => {
-  const [modalOpen, setModalOpen] = useState(false); // State to control the modal
-  const [currentComponentSource, setCurrentComponentSource] =
-    useState<string>("");
+  const [modalOpen, setModalOpen] = useState(false);
 
-  const isValidSrc = (src: string): boolean => {
-    if (typeof src !== "string" || src.trim() === "") return false;
-    if (src.startsWith("http") || src.startsWith("/")) return true;
-    return false;
+  // Dynamically import the component only if componentSource is provided
+  const DynamicComponent =
+    componentSource.trim() !== ""
+      ? dynamic(() => import(`../${componentSource}`), {
+          loading: () => <p>Loading...</p>,
+          ssr: false,
+        })
+      : null;
+
+  // Validate image src: must be non-empty and start with http or /
+  const isValidSrc = (src: string) =>
+    src.trim() !== "" && (src.startsWith("http") || src.startsWith("/"));
+
+  // Prevent background scrolling when modal is open
+  useEffect(() => {
+    const { style: htmlStyle } = document.documentElement;
+    const { style: bodyStyle } = document.body;
+
+    if (modalOpen) {
+      htmlStyle.overflow = "hidden";
+      bodyStyle.overflow = "hidden";
+    } else {
+      htmlStyle.overflow = "";
+      bodyStyle.overflow = "";
+    }
+
+    // Cleanup on unmount or modal close
+    return () => {
+      htmlStyle.overflow = "";
+      bodyStyle.overflow = "";
+    };
+  }, [modalOpen]);
+
+  // Open modal only if componentSource is provided
+  const openModal = () => {
+    if (componentSource.trim() !== "") setModalOpen(true);
   };
 
-  const openModal = (source: string) => {
-    setCurrentComponentSource(source); // Set the componentSource to display in the modal
-    setModalOpen(true); // Open the modal
-  };
+  const closeModal = () => setModalOpen(false);
 
-  const closeModal = () => {
-    setModalOpen(false); // Close the modal
-    setCurrentComponentSource(""); // Clear the componentSource
-  };
+  // Utility to check if the text is a placeholder "empty"
+  const isEmptyText = (text: string) => text === "empty";
+
+  // Modal JSX wrapped in a function for clarity
+  const renderModal = () =>
+    ReactDOM.createPortal(
+      <div className="fixed inset-0 z-50 flex items-center justify-center">
+        <div
+          className="fixed inset-0 bg-black opacity-70"
+          onClick={closeModal}
+          aria-label="Close modal backdrop"
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => e.key === "Escape" && closeModal()}
+        />
+
+        <div
+          className="relative z-50 bg-component1 p-5 rounded-md w-1/2 max-w-lg shadow-lg"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+          aria-describedby="modal-description"
+        >
+          <h2 id="modal-title" className="text-xl font-bold">
+            {title}
+          </h2>
+          <p id="modal-description" className="mt-2">
+            {description}
+          </p>
+          {DynamicComponent && <DynamicComponent />}
+          <button
+            onClick={closeModal}
+            className="mt-5 bg-red-500 text-white p-2 rounded-md hover:bg-red-700 transition-all duration-300"
+          >
+            Close
+          </button>
+        </div>
+      </div>,
+      document.body
+    );
 
   return (
     <div
@@ -52,52 +117,38 @@ const Card: React.FC<CardProps> = ({
           alt="watermark"
           width={1000}
           height={1000}
-          className="absolute top-0 left-0 transform w-[350px] mt-[-7rem] ml-[5rem] object-contain opacity-10 z-0 transition-all duration-500 ease-in-out group-hover:rotate-12"
+          className="absolute top-0 left-0 w-[350px] mt-[-7rem] ml-[5rem] object-contain opacity-10 z-0 transition-transform duration-500 ease-in-out group-hover:rotate-12"
+          priority={false}
+          unoptimized={true}
         />
       )}
+
       <div className="relative z-10">
         <div className="flex justify-between">
           <p
             className={`text-[18px] sm:text-[24px] font-medium truncate ${
-              title === "empty" ? "text-transparent" : "text-text"
+              isEmptyText(title) ? "text-transparent" : "text-text"
             }`}
           >
             {title}
           </p>
+
           <SeeMoreButton
             componentSource={componentSource}
             onOpenModal={openModal}
           />
         </div>
+
         <p
           className={`text-[14px] sm:text-[16px] truncate ${
-            description === "empty" ? "text-transparent" : "text-text"
+            isEmptyText(description) ? "text-transparent" : "text-text"
           }`}
         >
           {description}
         </p>
       </div>
 
-      {/* Modal */}
-      {modalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white p-5 rounded-md w-1/2">
-            <h2 className="text-xl font-bold">
-              Modal for {currentComponentSource}
-            </h2>
-            <p className="mt-2">
-              You can now display details based on the componentSource:
-            </p>
-            <p>{currentComponentSource}</p>
-            <button
-              onClick={closeModal}
-              className="mt-5 bg-red-500 text-white p-2 rounded-md hover:bg-red-700 transition-all duration-300"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+      {modalOpen && renderModal()}
     </div>
   );
 };

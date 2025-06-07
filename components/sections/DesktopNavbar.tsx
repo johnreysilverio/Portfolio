@@ -14,46 +14,50 @@ const DesktopNavbar: React.FC = () => {
       initialTopOffset.current = navbarRef.current.offsetTop;
     }
 
-    const onScroll = () => {
+    const handleScroll = () => {
       setIsSticky(window.scrollY > initialTopOffset.current);
     };
 
-    window.addEventListener("scroll", onScroll);
-    onScroll(); // Run once on mount
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check on mount
 
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
-  const navbarPosition = isSticky
+  // CSS classes depending on sticky state
+  const navbarPositionClass = isSticky
     ? "fixed top-0 bg-component1/10 backdrop-blur-md shadow-md"
     : "absolute bottom-0";
 
-  const navbarContainerStyle = isSticky
+  const navbarContainerClass = isSticky
     ? "rounded-none bg-white/10 backdrop-blur-md shadow-md"
     : "rounded-md bg-component1 sm:w-[766px] md:w-[1380px] 3xl:w-[1750px]";
 
   return (
     <div
       ref={navbarRef}
-      className={`hidden md:flex w-full h-[65px] 3xl:h-[90px] justify-center z-50 transition-all duration-200 ${navbarPosition}`}
+      className={`hidden md:flex w-full h-[65px] 3xl:h-[90px] justify-center z-[20] transition-all duration-200 ${navbarPositionClass}`}
     >
       <div
-        className={`flex w-full h-full justify-center transition-all duration-200 ${navbarContainerStyle}`}
+        className={`flex w-full h-full justify-center transition-all duration-200 ${navbarContainerClass}`}
       >
         <div className="w-[417px] sm:w-[746px] md:w-[1280px] 3xl:w-[1650px] flex items-center justify-between relative">
           <Image
             src="/svg/JR Logo.svg"
+            alt="JR Logo"
             width={1000}
             height={1000}
-            alt="JR Logo"
             className="w-[40px] md:w-[45px] 3xl:w-[55px]"
           />
 
-          <ul className="text-text list-none hidden sm:flex lg:justify-center">
+          <ul className="hidden sm:flex list-none text-text lg:justify-center gap-4">
             {["home", "about", "craft", "career", "contact"].map((section) => (
               <li key={section}>
                 <a
@@ -70,7 +74,7 @@ const DesktopNavbar: React.FC = () => {
           </ul>
 
           {/* Optional Theme Toggle */}
-          {/* <div className="block">
+          {/* <div>
             <ThemeToggle />
           </div> */}
         </div>

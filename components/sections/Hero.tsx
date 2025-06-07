@@ -56,7 +56,7 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* Buttons */}
+          {/* Call-to-Action Buttons */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-5">
             <CalendlyButton text="Let's Work Together" />
             <a
@@ -69,6 +69,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* Navbar */}
       <DesktopNavbar />
     </div>
   );

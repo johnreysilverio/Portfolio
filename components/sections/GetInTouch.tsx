@@ -26,6 +26,7 @@ const GetInTouch = () => {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
     const formData = new FormData(event.currentTarget);
     formData.append("access_key", "d31dd9e0-3b50-4ffe-a3a8-c47fd0323773");
 
@@ -42,11 +43,11 @@ const GetInTouch = () => {
     });
 
     const result = await response.json();
+
     if (result.success) {
       console.log("Form submitted successfully:", result);
       setStatus("success");
 
-      // ✅ Clear the form
       if (formRef.current) {
         formRef.current.reset();
       }
