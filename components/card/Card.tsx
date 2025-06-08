@@ -117,7 +117,7 @@ const Card: React.FC<CardProps> = ({
           alt="watermark"
           width={1000}
           height={1000}
-          className="absolute top-0 left-0 w-[350px] mt-[-7rem] ml-[5rem] object-contain opacity-10 z-0 transition-transform duration-500 ease-in-out group-hover:rotate-12"
+          className="absolute top-0 left-0 w-[150px] mt-[-1rem] ml-[1rem] md:w-[200px] md:mt-[-3.5rem] md:ml-[5rem] object-contain opacity-10 z-0 transition-transform duration-500 ease-in-out group-hover:rotate-12"
           priority={false}
           unoptimized={true}
         />

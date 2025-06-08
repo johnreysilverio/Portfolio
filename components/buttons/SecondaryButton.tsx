@@ -15,10 +15,10 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
   return (
     <Button
       variant="default"
-      className="bg-highlight dark:bg-highlight hover:bg-highlight/75 hover:dark:bg-highlight/75 flex justify-center items-center rounded-4xl p-3 3xl:p-4 shadow-md/30"
+      className="bg-component2 hover:bg-highlight/50 border-1 border-highlight flex justify-center items-center rounded-4xl p-3 3xl:p-4 shadow-md/30"
       onClick={onClick}
     >
-      <p className="text-[16px] 3xl:text-[20px] text-constantText font-bold leading-none">
+      <p className="text-[16px] 3xl:text-[20px] text-highlight font-bold leading-none">
         {text}
       </p>
     </Button>

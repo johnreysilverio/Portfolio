@@ -1,102 +1,73 @@
 export const skills = [
   {
-    title: "JavaScript",
-    description: "Proficient in JavaScript, including ES6+ features.",
+    title: "HTML",
+    description:
+      "Proficient in HTML5, with strong understanding of semantic markup and accessibility.",
     componentSource: "card/Javascript",
-    imageSource: "",
+    imageSource: "/png/logo/html.png",
   },
   {
-    title: "React",
-    description: "Experience building dynamic web applications using React.",
+    title: "CSS",
+    description:
+      "Skilled in CSS3, Flexbox, Grid, and responsive design principles.",
     componentSource: "",
-    imageSource: "",
+    imageSource: "/png/logo/css.png",
   },
   {
-    title: "Node.js",
-    description: "Experience with server-side development using Node.js.",
+    title: "JavaScript",
+    description:
+      "Proficient in JavaScript, including ES6+ features like arrow functions, async/await, and modules.",
     componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "HTML5",
-    description: "Solid understanding of HTML5 structure and semantics.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "CSS3",
-    description: "Strong skills in CSS3 and responsive design.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "TypeScript",
-    description: "Proficient in TypeScript for type-safe JavaScript.",
-    componentSource: "",
-    imageSource: "",
+    imageSource: "/png/logo/javascript.png",
   },
   {
     title: "Git",
-    description: "Experience with Git version control and GitHub workflows.",
+    description:
+      "Experienced in version control using Git and GitHub, including branching and pull requests.",
     componentSource: "",
-    imageSource: "",
+    imageSource: "/png/logo/git.png",
   },
   {
-    title: "GraphQL",
-    description: "Experience with GraphQL for API querying.",
+    title: "Node.js",
+    description:
+      "Experience building RESTful APIs and backend services using Node.js and Express.",
     componentSource: "",
-    imageSource: "",
+    imageSource: "/png/logo/nodejs.png",
+  },
+  {
+    title: "SQL",
+    description:
+      "Able to write complex SQL queries and work with relational databases like MySQL or PostgreSQL.",
+    componentSource: "",
+    imageSource: "/png/logo/sql.png",
+  },
+  {
+    title: "Postman",
+    description: "Proficient in testing and debugging REST APIs using Postman.",
+    componentSource: "",
+    imageSource: "/png/logo/postman.png",
+  },
+  {
+    title: "Vercel",
+    description:
+      "Deploy frontend applications seamlessly using Vercel, including custom domains and CI/CD workflows.",
+    componentSource: "",
+    imageSource: "/png/logo/vercel.png",
   },
 ];
 
 export const projects = [
   {
-    title: "Personal Portfolio",
-    description: "A personal website to showcase my work and projects.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "E-commerce Site",
-    description: "An online shopping platform with a full-stack solution.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "Blog Platform",
-    description: "A blog platform allowing users to post and share articles.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "Task Manager",
+    title: "DresScan",
     description:
-      "A task management app for team collaboration and productivity.",
+      "A Capstone Project focused on detecting school dress code violations using real-time object detection powered by YOLOv8 and computer vision.",
     componentSource: "",
     imageSource: "",
   },
   {
-    title: "Real Estate Website",
-    description: "A website to browse and list real estate properties.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "Weather App",
-    description: "A weather forecasting app using external APIs.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "Portfolio Generator",
+    title: "Payroll System",
     description:
-      "A tool for generating customizable portfolios for developers.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "Social Media Dashboard",
-    description: "A dashboard for tracking social media metrics and insights.",
+      "A desktop-based payroll management system for tracking employee attendance, salary computation, and automated payslip generation. Developed for the IM101 course.",
     componentSource: "",
     imageSource: "",
   },
@@ -104,57 +75,23 @@ export const projects = [
 
 export const experience = [
   {
-    title: "Web Developer at XYZ Corp",
+    title: "Frontend Intern at Jairosoft Inc.",
     description:
-      "Developed and maintained web applications using React and Node.js.",
+      "Collaborated with senior developers to build responsive and user-friendly web applications using Next.js and Tailwind CSS. Gained hands-on experience in frontend development, component-based architecture, and version control with Git. Participated in code reviews and agile sprint meetings. Worked from February 2025 to June 2025.",
     componentSource: "",
     imageSource: "",
   },
   {
-    title: "Frontend Developer at ABC Ltd",
+    title: "BSIT Student at Holy Cross of Davao College",
     description:
-      "Worked on UI/UX improvements and collaborated with designers.",
+      "Pursuing a Bachelor of Science in Information Technology (2021–2025) at Holy Cross of Davao College. Coursework includes software development, database systems, web technologies, and project management. Engaged in hands-on projects and academic research focused on real-world IT applications.",
     componentSource: "",
     imageSource: "",
   },
   {
-    title: "Software Engineer at Tech Solutions",
+    title: "Store Manager at Mart's Minimart (2020–2024)",
     description:
-      "Worked on backend services and API integration for mobile applications.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "Junior Web Developer at StartUp Inc.",
-    description:
-      "Assisted in building front-end interfaces and improving user experience.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "UI/UX Designer at Design Co.",
-    description:
-      "Created wireframes and prototypes for web and mobile applications.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "Product Developer at Innovate Tech",
-    description: "Worked with cross-functional teams to develop new features.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "Freelance Web Developer",
-    description:
-      "Provided web development services to clients on various projects.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "Intern at WebDev Studios",
-    description:
-      "Gained experience in front-end web development and team collaboration.",
+      "Served as the store manager from 2020 to 2024, overseeing day-to-day operations of the minimart. Responsibilities included inventory control, supplier coordination, staff supervision, and customer service. Managed and maintained the Point of Sale (POS) system, tracked daily sales, and ensured efficient and smooth business transactions.",
     componentSource: "",
     imageSource: "",
   },
@@ -162,52 +99,30 @@ export const experience = [
 
 export const certificates = [
   {
-    title: "Certified JavaScript Developer",
-    description: "Completed the official JavaScript certification course.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "React Developer Certificate",
-    description: "Certified in React development by XYZ institution.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "Node.js Certification",
+    title: "Legacy JavaScript Algorithms and Data Structures",
     description:
-      "Completed the Node.js certification course by Node University.",
+      "A certificate from freeCodeCamp covering core JavaScript fundamentals, algorithmic problem-solving, and essential data structures such as arrays, objects, and linked lists.",
     componentSource: "",
     imageSource: "",
   },
   {
-    title: "AWS Certified Developer",
+    title: "Responsive Web Design",
     description:
-      "AWS Developer Certification for cloud computing and development.",
+      "A certificate from freeCodeCamp focused on building accessible, mobile-friendly web pages using HTML5, CSS3, Flexbox, and CSS Grid.",
     componentSource: "",
     imageSource: "",
   },
   {
-    title: "TypeScript Certification",
-    description: "Completed a TypeScript certification course.",
+    title: "Introduction to Cybersecurity",
+    description:
+      "A foundational certificate from Cisco Networking Academy introducing key cybersecurity concepts, cyber threats, and best practices for online safety.",
     componentSource: "",
     imageSource: "",
   },
   {
-    title: "Git Essentials",
-    description: "Learned Git version control and collaborative workflows.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "GraphQL Fundamentals",
-    description: "Completed a course on GraphQL API design and usage.",
-    componentSource: "",
-    imageSource: "",
-  },
-  {
-    title: "Web Development Bootcamp",
-    description: "Completed a full-stack web development bootcamp.",
+    title: "JavaScript Tutorial: Learn JavaScript Just in 1 Hour",
+    description:
+      "A BitDegree certificate for completing a fast-paced introduction to JavaScript fundamentals, ideal for beginners exploring web development.",
     componentSource: "",
     imageSource: "",
   },

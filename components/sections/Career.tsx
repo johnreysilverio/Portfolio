@@ -45,14 +45,18 @@ const Career = () => {
     mobileShowMoreExperiences === "collapsed"
       ? filledExperiences.slice(0, 1)
       : mobileShowMoreExperiences === "partial"
-      ? filledExperiences.slice(0, 4)
+      ? experience.length <= 4
+        ? experience
+        : experience.slice(0, 4)
       : filledExperiences.slice(0, 7);
 
   const mobileDisplayedCertificates =
     mobileShowMoreCertificates === "collapsed"
       ? filledCertificates.slice(0, 1)
       : mobileShowMoreCertificates === "partial"
-      ? filledCertificates.slice(0, 4)
+      ? certificates.length <= 4
+        ? certificates
+        : certificates.slice(0, 4)
       : filledCertificates.slice(0, 7);
 
   const handleShowMoreExperiences = () => {
@@ -143,10 +147,12 @@ const Career = () => {
                 />
               ))}
             </div>
-            <SecondaryButton
-              text={showMoreExperiences ? "SHOW LESS" : "SHOW MORE"}
-              onClick={handleShowMoreExperiences}
-            />
+            {experience.length >= 5 && (
+              <SecondaryButton
+                text={showMoreExperiences ? "SHOW LESS" : "SHOW MORE"}
+                onClick={handleShowMoreExperiences}
+              />
+            )}
           </div>
 
           {/* CERTIFICATES Section */}
@@ -171,10 +177,12 @@ const Career = () => {
                 />
               ))}
             </div>
-            <SecondaryButton
-              text={showMoreCertificates ? "SHOW LESS" : "SHOW MORE"}
-              onClick={handleShowMoreCertificates}
-            />
+            {certificates.length >= 5 && (
+              <SecondaryButton
+                text={showMoreCertificates ? "SHOW LESS" : "SHOW MORE"}
+                onClick={handleShowMoreCertificates}
+              />
+            )}
           </div>
         </div>
 
@@ -203,14 +211,16 @@ const Career = () => {
                 />
               ))}
             </div>
-            <SecondaryButton
-              text={
-                mobileShowMoreExperiences === "expanded"
-                  ? "SHOW LESS"
-                  : "SHOW MORE"
-              }
-              onClick={handleMobileShowMoreExperiences}
-            />
+            {certificates.length >= 5 && (
+              <SecondaryButton
+                text={
+                  mobileShowMoreExperiences === "expanded"
+                    ? "SHOW LESS"
+                    : "SHOW MORE"
+                }
+                onClick={handleMobileShowMoreExperiences}
+              />
+            )}
           </div>
 
           {/* CERTIFICATES (Mobile) */}
@@ -236,14 +246,16 @@ const Career = () => {
                 />
               ))}
             </div>
-            <SecondaryButton
-              text={
-                mobileShowMoreCertificates === "expanded"
-                  ? "SHOW LESS"
-                  : "SHOW MORE"
-              }
-              onClick={handleMobileShowMoreCertificates}
-            />
+            {certificates.length >= 5 && (
+              <SecondaryButton
+                text={
+                  mobileShowMoreCertificates === "expanded"
+                    ? "SHOW LESS"
+                    : "SHOW MORE"
+                }
+                onClick={handleMobileShowMoreCertificates}
+              />
+            )}
           </div>
         </div>
       </div>

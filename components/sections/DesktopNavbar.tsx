@@ -4,8 +4,11 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import NavbarButton from "../buttons/NavbarButton";
 
+const sections = ["home", "about", "craft", "career", "contact"];
+
 const DesktopNavbar: React.FC = () => {
   const [isSticky, setIsSticky] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const navbarRef = useRef<HTMLDivElement>(null);
   const initialTopOffset = useRef(0);
 
@@ -16,6 +19,24 @@ const DesktopNavbar: React.FC = () => {
 
     const handleScroll = () => {
       setIsSticky(window.scrollY > initialTopOffset.current);
+
+      // Find currently visible section
+      let current = "home";
+      for (const section of sections) {
+        const elem = document.getElementById(section);
+        if (elem) {
+          const rect = elem.getBoundingClientRect();
+          // Check if top of section is near the top of viewport
+          if (
+            rect.top <= window.innerHeight / 3 &&
+            rect.bottom >= window.innerHeight / 3
+          ) {
+            current = section;
+            break;
+          }
+        }
+      }
+      setActiveSection(current);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -31,7 +52,6 @@ const DesktopNavbar: React.FC = () => {
     }
   };
 
-  // CSS classes depending on sticky state
   const navbarPositionClass = isSticky
     ? "fixed top-0 bg-component1/10 backdrop-blur-md shadow-md"
     : "absolute bottom-0";
@@ -58,7 +78,7 @@ const DesktopNavbar: React.FC = () => {
           />
 
           <ul className="hidden sm:flex list-none text-text lg:justify-center gap-4">
-            {["home", "about", "craft", "career", "contact"].map((section) => (
+            {sections.map((section) => (
               <li key={section}>
                 <a
                   href={`#${section}`}
@@ -67,16 +87,14 @@ const DesktopNavbar: React.FC = () => {
                     scrollToSection(section);
                   }}
                 >
-                  <NavbarButton text={section.toUpperCase()} />
+                  <NavbarButton
+                    text={section.toUpperCase()}
+                    isActive={activeSection === section}
+                  />
                 </a>
               </li>
             ))}
           </ul>
-
-          {/* Optional Theme Toggle */}
-          {/* <div>
-            <ThemeToggle />
-          </div> */}
         </div>
       </div>
     </div>

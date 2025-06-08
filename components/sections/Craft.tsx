@@ -37,14 +37,18 @@ const Craft = () => {
     mobileShowMoreSkills === "collapsed"
       ? filledSkills.slice(0, 1)
       : mobileShowMoreSkills === "partial"
-      ? filledSkills.slice(0, 4)
+      ? filledSkills.length <= 4
+        ? skills
+        : skills.slice(0, 4)
       : filledSkills.slice(0, 7);
 
   const mobileDisplayedProjects =
     mobileShowMoreProjects === "collapsed"
       ? filledProjects.slice(0, 1)
       : mobileShowMoreProjects === "partial"
-      ? filledProjects.slice(0, 4)
+      ? filledProjects.length <= 4
+        ? projects
+        : projects.slice(0, 4)
       : filledProjects.slice(0, 7);
 
   const handleShowMoreSkills = () => {
@@ -135,10 +139,13 @@ const Craft = () => {
                 />
               ))}
             </div>
-            <SecondaryButton
-              text={showMoreSkills ? "SHOW LESS" : "SHOW MORE"}
-              onClick={handleShowMoreSkills}
-            />
+
+            {skills.length >= 5 && (
+              <SecondaryButton
+                text={showMoreSkills ? "SHOW LESS" : "SHOW MORE"}
+                onClick={handleShowMoreSkills}
+              />
+            )}
           </div>
 
           {/* PROJECTS Section */}
@@ -163,10 +170,12 @@ const Craft = () => {
                 />
               ))}
             </div>
-            <SecondaryButton
-              text={showMoreProjects ? "SHOW LESS" : "SHOW MORE"}
-              onClick={handleShowMoreProjects}
-            />
+            {projects.length >= 5 && (
+              <SecondaryButton
+                text={showMoreProjects ? "SHOW LESS" : "SHOW MORE"}
+                onClick={handleShowMoreProjects}
+              />
+            )}
           </div>
         </div>
 
@@ -195,12 +204,16 @@ const Craft = () => {
                 />
               ))}
             </div>
-            <SecondaryButton
-              text={
-                mobileShowMoreSkills === "expanded" ? "SHOW LESS" : "SHOW MORE"
-              }
-              onClick={handleMobileShowMoreSkills}
-            />
+            {skills.length >= 5 && (
+              <SecondaryButton
+                text={
+                  mobileShowMoreSkills === "expanded"
+                    ? "SHOW LESS"
+                    : "SHOW MORE"
+                }
+                onClick={handleMobileShowMoreSkills}
+              />
+            )}
           </div>
 
           {/* PROJECTS (Mobile) */}
@@ -226,14 +239,16 @@ const Craft = () => {
                 />
               ))}
             </div>
-            <SecondaryButton
-              text={
-                mobileShowMoreProjects === "expanded"
-                  ? "SHOW LESS"
-                  : "SHOW MORE"
-              }
-              onClick={handleMobileShowMoreProjects}
-            />
+            {projects.length >= 5 && (
+              <SecondaryButton
+                text={
+                  mobileShowMoreProjects === "expanded"
+                    ? "SHOW LESS"
+                    : "SHOW MORE"
+                }
+                onClick={handleMobileShowMoreProjects}
+              />
+            )}
           </div>
         </div>
       </div>
