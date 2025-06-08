@@ -21,7 +21,9 @@ const NavbarButton: React.FC<NavbarButtonProps> = ({
         ${isActive ? "border-highlight" : "border-transparent"}
         hover:border-highlight hover:bg-transparent`}
     >
-      <p className="text-[16px] text-text">{text}</p>
+      <p className={`text-[16px] ${isActive ? "text-highlight" : "text-text"}`}>
+        {text}
+      </p>
     </Button>
   );
 };

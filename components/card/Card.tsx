@@ -108,7 +108,13 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <div
-      className={`bg-component2 flex flex-col p-3 rounded-md text-text text-start gap-3 overflow-hidden relative group shadow-md/30 border-2 border-transparent hover:border-highlight transition-all duration-300 ${className}`}
+      className={` flex flex-col p-3 rounded-md text-text text-start gap-3 overflow-hidden relative group  transition-all duration-300 
+        ${className}
+        ${
+          isEmptyText(title)
+            ? "bg-transparent"
+            : "bg-component2 shadow-md/30 border-2 border-transparent hover:border-highlight"
+        }`}
       style={style}
     >
       {isValidSrc(imageSource) && (

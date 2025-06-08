@@ -71,6 +71,13 @@ export const projects = [
     componentSource: "",
     imageSource: "",
   },
+  {
+    title: "ColinaHealth",
+    description:
+      "A web app designed to streamline patient care and clinic management. It offers features like appointment scheduling, patient records management, medical history tracking, and real-time communication between healthcare providers and patients. Built for efficiency and accessibility in modern healthcare environments.",
+    componentSource: "",
+    imageSource: "",
+  },
 ];
 
 export const experience = [
