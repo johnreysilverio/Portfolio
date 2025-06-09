@@ -82,13 +82,22 @@ const Card: React.FC<CardProps> = ({
         />
 
         <div
-          className="relative z-50 bg-component1 p-5 rounded-md w-1/2 max-w-lg shadow-lg"
+          className="flex flex-col z-50 bg-component1 p-5 rounded-md w-full max-w-3/4 shadow-lg items-center"
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-title"
           aria-describedby="modal-description"
         >
-          <h2 id="modal-title" className="text-xl font-bold">
+          <Image
+            src={imageSource}
+            alt="watermark"
+            width={1000}
+            height={1000}
+            className="w-[120px] md:w-[180px] object-contain z-0 pointer-events-none transition-transform duration-500 ease-in-out"
+            priority={false}
+            unoptimized={true}
+          />
+          <h2 id="modal-title" className="text-3xl font-bold">
             {title}
           </h2>
           <p id="modal-description" className="mt-2">

@@ -1,11 +1,7 @@
 import React from "react";
 
 const Javascript = () => {
-  return (
-    <div>
-      <p>HELLO WORLD</p>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Javascript;
