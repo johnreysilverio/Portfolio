@@ -57,7 +57,7 @@ const DesktopNavbar: React.FC = () => {
     : "absolute bottom-0";
 
   const navbarContainerClass = isSticky
-    ? "rounded-none bg-white/10 backdrop-blur-md shadow-md"
+    ? "rounded-none bg-component1/50 backdrop-blur-md shadow-md"
     : "rounded-md bg-component1 sm:w-[766px] md:w-[1380px] 3xl:w-[1750px]";
 
   return (
