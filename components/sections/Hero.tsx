@@ -60,7 +60,7 @@ const Hero = () => {
           <div className="flex flex-col md:flex-row justify-center items-center gap-5">
             <CalendlyButton text="Let's Work Together" />
             <a
-              href="/files/resume.pdf"
+              href="/files/resume2025.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
