@@ -6,11 +6,16 @@ import { FaLinkedinIn, FaInstagram, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
 
 const Footer = () => {
-  const links = ["HOME", "ABOUT", "CRAFT", "CAREER", "CONTACT"];
+  // const links = ["HOME", "ABOUT", "CRAFT", "CAREER", "CONTACT"];
+  const links = ["HOME", "ABOUT", "CRAFT", "CAREER"];
 
   const handleSmoothScroll = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const yearDisplay = () => {
+    return new Date().getFullYear();
   };
 
   return (
@@ -105,7 +110,7 @@ const Footer = () => {
       <div className="w-full bg-[#121212] flex justify-center items-center">
         <div className="w-[417px] sm:w-[746px] md:w-[1280px] 3xl:w-[1650px] py-10 text-center">
           <p className="text-[16px]">
-            © 2025{" "}
+            © {yearDisplay()}{" "}
             <a
               href="#home"
               className="text-highlight"

@@ -4,7 +4,8 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import NavbarButton from "../buttons/NavbarButton";
 
-const sections = ["home", "about", "craft", "career", "contact"];
+// const sections = ["home", "about", "craft", "career", "contact"];
+const sections = ["home", "about", "craft", "career"];
 
 const DesktopNavbar: React.FC = () => {
   const [isSticky, setIsSticky] = useState(false);

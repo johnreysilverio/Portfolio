@@ -28,7 +28,8 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ isOpen, onClose }) => {
       className="absolute top-full w-full bg-component1 border-2 border-background1 text-text rounded shadow-lg p-2"
     >
       <ul className="flex flex-col text-center items-center gap-2">
-        {["home", "about", "craft", "career", "contact"].map((section) => (
+        {/* {["home", "about", "craft", "career", "contact"].map((section) => ( */}
+        {["home", "about", "craft", "career"].map((section) => (
           <li key={section}>
             <a
               href={`#${section}`}

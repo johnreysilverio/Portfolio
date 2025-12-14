@@ -3,7 +3,7 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Craft from "@/components/sections/Craft";
 import Career from "@/components/sections/Career";
-import Contact from "@/components/sections/Contact";
+// import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 
 export default function Portfolio() {
@@ -27,7 +27,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <Contact />
+        {/* <Contact /> */}
       </main>
 
       <Footer />
