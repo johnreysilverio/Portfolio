@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
@@ -14,6 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://johnreysilverio.com"),
+
   title: {
     default: "John Rey Silverio | Full Stack Developer",
     template: "%s | John Rey Silverio",
@@ -74,7 +76,9 @@ export const metadata: Metadata = {
     shortcut: "/svg/JR Logo.svg",
     apple: "/svg/JR Logo.svg",
   },
+};
 
+export const viewport: Viewport = {
   themeColor: "#000000",
 };
 
