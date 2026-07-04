@@ -72,9 +72,11 @@ const DesktopNavbar: React.FC = () => {
         <div className="w-[417px] sm:w-[746px] md:w-[1280px] 3xl:w-[1650px] flex items-center justify-between relative">
           <Image
             src="/svg/JR Logo.svg"
-            alt="JR Logo"
             width={1000}
             height={1000}
+            alt="John Rey Silverio Full Stack Developer Logo"
+            title="John Rey Silverio Portfolio Logo"
+            priority
             className="w-[40px] md:w-[45px] 3xl:w-[55px]"
           />
 

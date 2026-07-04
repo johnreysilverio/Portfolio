@@ -21,14 +21,14 @@ const Hero = () => {
         <div className="w-full flex flex-col justify-center items-center gap-10 md:gap-15 3xl:gap-20">
           {/* Headline */}
           <div className="flex flex-col text-center">
-            <p className="text-highlight text-[35px] sm:text-[75px] 3xl:text-[100px] font-bold leading-tight">
+            <h1 className="text-highlight text-[35px] sm:text-[75px] 3xl:text-[100px] font-bold leading-tight">
               Building the web,
               <br />
               one line of code at a time.
-            </p>
-            <p className="text-text text-[16px] sm:text-[24px] 3xl:text-[32px] mt-2">
+            </h1>
+            <h2 className="text-text text-[16px] sm:text-[24px] 3xl:text-[32px] mt-2">
               Turning ideas into experience and pixels into purpose.
-            </p>
+            </h2>
           </div>
 
           {/* Social Icons */}

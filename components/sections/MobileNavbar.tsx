@@ -17,7 +17,9 @@ const MobileNavbar: React.FC = () => {
             src="/svg/JR Logo.svg"
             width={1000}
             height={1000}
-            alt="JR Logo"
+            alt="John Rey Silverio Full Stack Developer Logo"
+            title="John Rey Silverio Portfolio Logo"
+            priority
             className="w-[40px] md:w-[45px] 3xl:w-[55px]"
           />
 

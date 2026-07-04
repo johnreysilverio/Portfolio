@@ -20,19 +20,19 @@ const About: React.FC = () => {
       <div className="w-[417px] sm:w-[746px] md:w-[1280px] 3xl:w-[1650px] flex flex-col items-start justify-center">
         {/* Section Title */}
         <div className="mb-5 md:mb-10 w-full text-center">
-          <p className="text-highlight text-[40px] sm:text-[48px] 3xl:text-[60px] font-bold">
+          <h2 className="text-highlight text-[40px] sm:text-[48px] 3xl:text-[60px] font-bold">
             ABOUT ME
-          </p>
+          </h2>
         </div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-2 gap-5 w-full">
           {/* Left Text Section */}
           <div className="col-span-2 md:col-span-1 order-2 md:order-1 flex flex-col justify-center items-center text-center gap-5 md:gap-10 3xl:gap-15 mb-10">
-            <p className="text-text text-[24px] sm:text-[32px] 3xl:text-[44px]">
+            <h3 className="text-text text-[24px] sm:text-[32px] 3xl:text-[44px]">
               HI, I’M <span className="text-highlight">JOHN REY</span>, A WEB
               DEVELOPER
-            </p>
+            </h3>
 
             <p className="text-text text-[14px] sm:text-[18px] 3xl:text-[24px] text-justify">
               {`I'm a passionate Web Developer with a mission to create seamless

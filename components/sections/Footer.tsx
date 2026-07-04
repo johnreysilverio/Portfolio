@@ -64,9 +64,11 @@ const Footer = () => {
           <section className="flex flex-col items-center sm:items-end text-center sm:text-end gap-5">
             <Image
               src="/svg/JR Logo.svg"
-              alt="JR Logo"
               width={1000}
               height={1000}
+              alt="John Rey Silverio Full Stack Developer Logo"
+              title="John Rey Silverio Portfolio Logo"
+              priority
               className="w-[40px] md:w-[45px] 3xl:w-[55px]"
             />
             <p className="text-[16px]">

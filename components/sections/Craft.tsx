@@ -111,9 +111,9 @@ const Craft = () => {
       id="craft"
     >
       <div className="w-full max-w-[417px] sm:max-w-[746px] md:max-w-[1280px] 3xl:max-w-[1650px] h-full flex flex-col items-center justify-center">
-        <p className="text-[36px] sm:text-[48px] text-highlight font-bold mt-10">
+        <h2 className="text-[36px] sm:text-[48px] text-highlight font-bold mt-10">
           CRAFTS
-        </p>
+        </h2>
 
         {/* Tablet and Desktop View */}
         <div className="hidden sm:flex w-full text-center gap-2 mt-5 transition-all duration-500">

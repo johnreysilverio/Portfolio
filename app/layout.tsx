@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
@@ -12,9 +13,69 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "John Rey's Portfolio",
-  description: "John Rey's Portfolio",
+export const metadata: Metadata = {
+  title: {
+    default: "John Rey Silverio | Full Stack Developer",
+    template: "%s | John Rey Silverio",
+  },
+
+  description:
+    "Portfolio of John Rey Silverio — Full Stack Developer specializing in Next.js, React, TypeScript, and modern web applications.",
+
+  keywords: [
+    "John Rey Silverio",
+    "Portfolio",
+    "Full Stack Developer",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Web Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Philippines Developer",
+  ],
+
+  authors: [{ name: "John Rey Silverio" }],
+  creator: "John Rey Silverio",
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: "John Rey Silverio | Full Stack Developer",
+    description:
+      "Explore projects, skills, and experience of John Rey Silverio.",
+    siteName: "John Rey Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "John Rey Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "John Rey Silverio | Full Stack Developer",
+    description:
+      "Modern Full Stack Developer specializing in Next.js and React.",
+    images: ["/og-image.png"],
+  },
+
+  icons: {
+    icon: "/svg/JR Logo.svg",
+    shortcut: "/svg/JR Logo.svg",
+    apple: "/svg/JR Logo.svg",
+  },
+
+  themeColor: "#000000",
 };
 
 export default function RootLayout({
@@ -24,9 +85,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/svg/JR Logo.svg" type="image/svg+xml" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased p-0 m-0`}
       >
