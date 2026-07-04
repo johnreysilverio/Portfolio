@@ -38,6 +38,10 @@ export const metadata: Metadata = {
     "Philippines Developer",
   ],
 
+  alternates: {
+    canonical: "https://johnreysilverio.com",
+  },
+
   authors: [{ name: "John Rey Silverio" }],
   creator: "John Rey Silverio",
 
