@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import ReactDOM from "react-dom";
+import Link from "next/link";
 import SeeMoreButton from "../buttons/SeeMoreButton";
 
 interface CardProps {
@@ -11,6 +12,7 @@ interface CardProps {
   showDetails?: boolean;
   imageSource?: string;
   detailImageSource?: string;
+  detailHref?: string;
   className?: string;
   style?: React.CSSProperties;
 }
@@ -21,6 +23,7 @@ const Card: React.FC<CardProps> = ({
   showDetails = false,
   imageSource = "",
   detailImageSource = "",
+  detailHref = "",
   className = "",
   style = {},
 }) => {
@@ -104,9 +107,18 @@ const Card: React.FC<CardProps> = ({
               unoptimized
             />
           )}
+          {detailHref && (
+            <Link
+              href={detailHref}
+              className="mt-5 rounded-md bg-highlight px-5 py-2.5 font-semibold text-white transition-opacity hover:opacity-80"
+              onClick={closeModal}
+            >
+              View full case study
+            </Link>
+          )}
           <button
             onClick={closeModal}
-            className="mt-5 bg-red-500 text-white p-2 rounded-md hover:bg-red-700 transition-all duration-300"
+            className="mt-3 rounded-md border border-white/20 px-5 py-2 text-text transition-colors hover:bg-white/10"
           >
             Close
           </button>

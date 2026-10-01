@@ -9,9 +9,9 @@ const Contact = () => {
       id="contact"
     >
       <div className="w-[417px] sm:w-[746px] md:w-[1280px] 3xl:w-[1650px] flex flex-col items-center justify-center">
-        <p className="text-highlight text-[40px] sm:text-[48px] font-bold">
+        <h2 className="text-highlight text-[40px] sm:text-[48px] font-bold">
           CONTACT
-        </p>
+        </h2>
 
         <div className="grid grid-cols-2 items-center gap-2 mt-5">
           {/* Left Side - Contact Info */}
@@ -28,7 +28,9 @@ const Contact = () => {
                 </div>
                 <div className="text-text text-[16px]">
                   <p>Phone</p>
-                  <p>+63 930 629 7787</p>
+                  <a className="hover:text-highlight" href="tel:+639306297787">
+                    +63 930 629 7787
+                  </a>
                 </div>
               </div>
 
@@ -39,7 +41,9 @@ const Contact = () => {
                 </div>
                 <div className="text-text text-[16px]">
                   <p>Mail</p>
-                  <p className="underline">johnrey.silverio.p@gmail.com</p>
+                  <a className="underline hover:text-highlight" href="mailto:johnrey.silverio.p@gmail.com">
+                    johnrey.silverio.p@gmail.com
+                  </a>
                 </div>
               </div>
 

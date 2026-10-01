@@ -6,8 +6,7 @@ import { FaLinkedinIn, FaInstagram, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
 
 const Footer = () => {
-  // const links = ["HOME", "ABOUT", "CRAFT", "CAREER", "CONTACT"];
-  const links = ["HOME", "ABOUT", "CRAFT", "CAREER"];
+  const links = ["HOME", "ABOUT", "CRAFT", "CAREER", "CONTACT"];
 
   const handleSmoothScroll = (id: string) => {
     const el = document.getElementById(id);

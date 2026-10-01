@@ -172,6 +172,7 @@ const Craft = ({
                   description={project.description || "empty"}
                   imageSource={project.imageSource || ""}
                   detailImageSource={project.detailImageSource || ""}
+                  detailHref={(project.title || "").toLowerCase() === "dresscan" ? "/projects/dresscan" : ""}
                   showDetails={project.showDetails}
                   className={showMoreProjects ? "col-span-1" : "col-span-2"}
                   style={{ gridRow: `${(index % 4) + 1}` }}
@@ -244,6 +245,7 @@ const Craft = ({
                   description={project.description || "empty"}
                   imageSource={project.imageSource || ""}
                   detailImageSource={project.detailImageSource || ""}
+                  detailHref={(project.title || "").toLowerCase() === "dresscan" ? "/projects/dresscan" : ""}
                   showDetails={project.showDetails}
                   className="col-span-1"
                 />

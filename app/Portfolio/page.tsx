@@ -3,7 +3,7 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Craft from "@/components/sections/Craft";
 import Career from "@/components/sections/Career";
-// import Contact from "@/components/sections/Contact";
+import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 import type { PortfolioContent } from "@/lib/portfolio-types";
 import { getPortfolioContent } from "@/lib/portfolio-data";
@@ -35,7 +35,7 @@ export default async function Portfolio({ content }: { content?: PortfolioConten
           </div>
         </section>
 
-        {/* <Contact /> */}
+        <Contact />
       </main>
 
       <Footer />

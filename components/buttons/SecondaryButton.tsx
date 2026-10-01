@@ -5,16 +5,21 @@ import { Button } from "@/components/ui/button";
 
 interface SecondaryButtonProps {
   text: string;
-  onClick?: () => void; // Add the onClick prop here
+  onClick?: () => void;
+  disabled?: boolean;
+  type?: "button" | "submit";
 }
 
 const SecondaryButton: React.FC<SecondaryButtonProps> = ({
   text = "",
   onClick,
+  disabled = false,
+  type = "button",
 }) => {
   return (
     <Button
-      type="button"
+      type={type}
+      disabled={disabled}
       variant="default"
       className="bg-component2 hover:bg-highlight/50 border-1 border-highlight flex justify-center items-center rounded-4xl p-3 3xl:p-4 shadow-md/30"
       onClick={onClick}
