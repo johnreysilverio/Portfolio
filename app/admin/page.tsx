@@ -28,11 +28,17 @@ export default async function AdminPage() {
     redirect("/admin?error=unauthorized");
   }
 
-  const { data: rows } = await supabase
-    .from("portfolio_items")
-    .select("id,kind,title,description,image_source,detail_image_source,show_details,sort_order,is_published")
-    .order("kind")
-    .order("sort_order");
+  const [{ data: rows }, { data: aboutImages }] = await Promise.all([
+    supabase
+      .from("portfolio_items")
+      .select("id,kind,title,description,image_source,detail_image_source,show_details,sort_order,is_published")
+      .order("kind")
+      .order("sort_order"),
+    supabase
+      .from("portfolio_about_images")
+      .select("id,image_source,alt_text,sort_order,is_published")
+      .order("sort_order"),
+  ]);
 
-  return <AdminDashboard initialRows={rows ?? []} email={user.email ?? "Admin"} />;
+  return <AdminDashboard initialRows={rows ?? []} initialAboutImages={aboutImages ?? []} email={user.email ?? "Admin"} />;
 }

@@ -3,8 +3,9 @@
 import React from "react";
 import MainButton from "../buttons/MainButton";
 import AboutPicsAnimation from "../Animation/AboutPicsAnimation";
+import type { AboutImage } from "@/lib/portfolio-types";
 
-const About: React.FC = () => {
+const About = ({ images }: { images: AboutImage[] }) => {
   const handleSmoothScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -62,7 +63,7 @@ const About: React.FC = () => {
 
             {/* Animation Overlay */}
             <div className="absolute inset-0 overflow-hidden mt-5 mr-5 sm:mt-10 sm:mr-10">
-              <AboutPicsAnimation />
+              <AboutPicsAnimation images={images} />
             </div>
           </div>
         </div>

@@ -18,7 +18,7 @@ export default async function Portfolio({ content }: { content?: PortfolioConten
 
       <main>
         <Hero />
-        <About />
+        <About images={resolvedContent.aboutImages} />
 
         <section
           aria-label="Craft and Career Section"

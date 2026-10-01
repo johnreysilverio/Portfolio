@@ -14,7 +14,16 @@ export interface PortfolioItem {
   isPublished: boolean;
 }
 
+export interface AboutImage {
+  id?: string;
+  imageSource: string;
+  altText: string;
+  sortOrder: number;
+  isPublished: boolean;
+}
+
 export interface PortfolioContent {
+  aboutImages: AboutImage[];
   skills: PortfolioItem[];
   projects: PortfolioItem[];
   experience: PortfolioItem[];
