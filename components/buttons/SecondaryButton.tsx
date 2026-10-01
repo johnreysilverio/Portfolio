@@ -14,6 +14,7 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
 }) => {
   return (
     <Button
+      type="button"
       variant="default"
       className="bg-component2 hover:bg-highlight/50 border-1 border-highlight flex justify-center items-center rounded-4xl p-3 3xl:p-4 shadow-md/30"
       onClick={onClick}

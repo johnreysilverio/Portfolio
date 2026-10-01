@@ -5,8 +5,13 @@ import Craft from "@/components/sections/Craft";
 import Career from "@/components/sections/Career";
 // import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
+import type { PortfolioContent } from "@/lib/portfolio-types";
+import { getPortfolioContent } from "@/lib/portfolio-data";
 
-export default function Portfolio() {
+export const dynamic = "force-dynamic";
+
+export default async function Portfolio({ content }: { content?: PortfolioContent }) {
+  const resolvedContent = content ?? await getPortfolioContent();
   return (
     <div>
       <MobileNavbar />
@@ -22,8 +27,11 @@ export default function Portfolio() {
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(0,0,0,0)_40%,rgba(0,0,0,0.6)_100%)] pointer-events-none z-0" />
 
           <div className="relative z-10">
-            <Craft />
-            <Career />
+            <Craft skills={resolvedContent.skills} projects={resolvedContent.projects} />
+            <Career
+              experience={resolvedContent.experience}
+              certificates={resolvedContent.certificates}
+            />
           </div>
         </section>
 

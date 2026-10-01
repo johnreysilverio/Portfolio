@@ -22,6 +22,7 @@ const Hero = () => {
           {/* Headline */}
           <div className="flex flex-col text-center">
             <h1 className="text-highlight text-[35px] sm:text-[75px] 3xl:text-[100px] font-bold leading-tight">
+              <span className="sr-only">John Rey Silverio, Full Stack Developer. </span>
               Building the web,
               <br />
               one line of code at a time.

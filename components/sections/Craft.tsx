@@ -3,11 +3,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import SecondaryButton from "../buttons/SecondaryButton";
 import Card from "../../components/card/Card";
-import { skills, projects } from "@/lib/cardData";
 import { fillArrayToLength } from "@/lib/fillArrayToLength";
 import { portfolioPlaceholder } from "@/lib/placeholders";
+import type { PortfolioItem } from "@/lib/portfolio-types";
 
-const Craft = () => {
+const Craft = ({
+  skills,
+  projects,
+}: {
+  skills: PortfolioItem[];
+  projects: PortfolioItem[];
+}) => {
   const [showMoreSkills, setShowMoreSkills] = useState(false);
   const [showMoreProjects, setShowMoreProjects] = useState(false);
   const [mobileShowMoreSkills, setMobileShowMoreSkills] = useState<
@@ -40,7 +46,7 @@ const Craft = () => {
       ? filledSkills.length <= 4
         ? skills
         : skills.slice(0, 4)
-      : filledSkills.slice(0, 7);
+      : skills;
 
   const mobileDisplayedProjects =
     mobileShowMoreProjects === "collapsed"
@@ -49,7 +55,7 @@ const Craft = () => {
       ? filledProjects.length <= 4
         ? projects
         : projects.slice(0, 4)
-      : filledProjects.slice(0, 7);
+      : projects;
 
   const handleShowMoreSkills = () => {
     setShowMoreSkills(!showMoreSkills);
@@ -133,7 +139,8 @@ const Craft = () => {
                   title={skill.title || "empty"}
                   description={skill.description || "empty"}
                   imageSource={skill.imageSource || ""}
-                  componentSource={skill.componentSource || ""}
+                  detailImageSource={skill.detailImageSource || ""}
+                  showDetails={skill.showDetails}
                   className={showMoreSkills ? "col-span-1" : "col-span-2"}
                   style={{ gridRow: `${(index % 4) + 1}` }}
                 />
@@ -164,7 +171,8 @@ const Craft = () => {
                   title={project.title || "empty"}
                   description={project.description || "empty"}
                   imageSource={project.imageSource || ""}
-                  componentSource={project.componentSource || ""}
+                  detailImageSource={project.detailImageSource || ""}
+                  showDetails={project.showDetails}
                   className={showMoreProjects ? "col-span-1" : "col-span-2"}
                   style={{ gridRow: `${(index % 4) + 1}` }}
                 />
@@ -199,7 +207,8 @@ const Craft = () => {
                   title={skill.title || "empty"}
                   description={skill.description || "empty"}
                   imageSource={skill.imageSource || ""}
-                  componentSource={skill.componentSource || ""}
+                  detailImageSource={skill.detailImageSource || ""}
+                  showDetails={skill.showDetails}
                   className="col-span-1"
                 />
               ))}
@@ -234,7 +243,8 @@ const Craft = () => {
                   title={project.title || "empty"}
                   description={project.description || "empty"}
                   imageSource={project.imageSource || ""}
-                  componentSource={project.componentSource || ""}
+                  detailImageSource={project.detailImageSource || ""}
+                  showDetails={project.showDetails}
                   className="col-span-1"
                 />
               ))}

@@ -2,15 +2,15 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import ReactDOM from "react-dom";
 import SeeMoreButton from "../buttons/SeeMoreButton";
 
 interface CardProps {
   title?: string;
   description?: string;
-  componentSource?: string;
+  showDetails?: boolean;
   imageSource?: string;
+  detailImageSource?: string;
   className?: string;
   style?: React.CSSProperties;
 }
@@ -18,21 +18,13 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({
   title = "",
   description = "",
-  componentSource = "",
+  showDetails = false,
   imageSource = "",
+  detailImageSource = "",
   className = "",
   style = {},
 }) => {
   const [modalOpen, setModalOpen] = useState(false);
-
-  // Dynamically import the component only if componentSource is provided
-  const DynamicComponent =
-    componentSource.trim() !== ""
-      ? dynamic(() => import(`../${componentSource}`), {
-          loading: () => <p>Loading...</p>,
-          ssr: false,
-        })
-      : null;
 
   // Validate image src: must be non-empty and start with http or /
   const isValidSrc = (src: string) =>
@@ -58,9 +50,8 @@ const Card: React.FC<CardProps> = ({
     };
   }, [modalOpen]);
 
-  // Open modal only if componentSource is provided
   const openModal = () => {
-    if (componentSource.trim() !== "") setModalOpen(true);
+    if (showDetails) setModalOpen(true);
   };
 
   const closeModal = () => setModalOpen(false);
@@ -103,7 +94,16 @@ const Card: React.FC<CardProps> = ({
           <p id="modal-description" className="mt-2">
             {description}
           </p>
-          {DynamicComponent && <DynamicComponent />}
+          {isValidSrc(detailImageSource) && (
+            <Image
+              src={detailImageSource}
+              alt={`${title} detail`}
+              width={1000}
+              height={1000}
+              className="mt-4 w-[120px] md:w-[380px] object-contain"
+              unoptimized
+            />
+          )}
           <button
             onClick={closeModal}
             className="mt-5 bg-red-500 text-white p-2 rounded-md hover:bg-red-700 transition-all duration-300"
@@ -149,7 +149,7 @@ const Card: React.FC<CardProps> = ({
           </p>
 
           <SeeMoreButton
-            componentSource={componentSource}
+            hasDetails={showDetails}
             onOpenModal={openModal}
           />
         </div>

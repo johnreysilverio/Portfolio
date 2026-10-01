@@ -1,6 +1,7 @@
 export interface PortfolioItem {
   title?: string;
   description?: string;
-  componentSource?: string;
+  showDetails?: boolean;
   imageSource?: string;
+  detailImageSource?: string;
 }

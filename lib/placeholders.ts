@@ -3,6 +3,7 @@ import { PortfolioItem } from "@/lib";
 export const portfolioPlaceholder: PortfolioItem = {
   title: "",
   description: "",
-  componentSource: "",
+  showDetails: false,
   imageSource: "",
+  detailImageSource: "",
 };

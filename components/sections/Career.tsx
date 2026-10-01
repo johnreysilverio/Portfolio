@@ -3,11 +3,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import SecondaryButton from "../buttons/SecondaryButton";
 import Card from "../../components/card/Card";
-import { experience, certificates } from "@/lib/cardData";
 import { fillArrayToLength } from "@/lib/fillArrayToLength";
 import { portfolioPlaceholder } from "@/lib/placeholders";
+import type { PortfolioItem } from "@/lib/portfolio-types";
 
-const Career = () => {
+const Career = ({
+  experience,
+  certificates,
+}: {
+  experience: PortfolioItem[];
+  certificates: PortfolioItem[];
+}) => {
   const [showMoreExperiences, setShowMoreExperiences] = useState(false);
   const [showMoreCertificates, setShowMoreCertificates] = useState(false);
   const [mobileShowMoreExperiences, setMobileShowMoreExperiences] = useState<
@@ -48,7 +54,7 @@ const Career = () => {
       ? experience.length <= 4
         ? experience
         : experience.slice(0, 4)
-      : filledExperiences.slice(0, 7);
+      : experience;
 
   const mobileDisplayedCertificates =
     mobileShowMoreCertificates === "collapsed"
@@ -57,7 +63,7 @@ const Career = () => {
       ? certificates.length <= 4
         ? certificates
         : certificates.slice(0, 4)
-      : filledCertificates.slice(0, 7);
+      : certificates;
 
   const handleShowMoreExperiences = () => {
     setShowMoreExperiences(!showMoreExperiences);
@@ -141,7 +147,8 @@ const Career = () => {
                   title={exp.title || "empty"}
                   description={exp.description || "empty"}
                   imageSource={exp.imageSource || ""}
-                  componentSource={exp.componentSource || ""}
+                  detailImageSource={exp.detailImageSource || ""}
+                  showDetails={exp.showDetails}
                   className={showMoreExperiences ? "col-span-1" : "col-span-2"}
                   style={{ gridRow: `${(index % 4) + 1}` }}
                 />
@@ -171,7 +178,8 @@ const Career = () => {
                   title={cert.title || "empty"}
                   description={cert.description || "empty"}
                   imageSource={cert.imageSource || ""}
-                  componentSource={cert.componentSource || ""}
+                  detailImageSource={cert.detailImageSource || ""}
+                  showDetails={cert.showDetails}
                   className={showMoreCertificates ? "col-span-1" : "col-span-2"}
                   style={{ gridRow: `${(index % 4) + 1}` }}
                 />
@@ -206,7 +214,8 @@ const Career = () => {
                   title={exp.title || "empty"}
                   description={exp.description || "empty"}
                   imageSource={exp.imageSource || ""}
-                  componentSource={exp.componentSource || ""}
+                  detailImageSource={exp.detailImageSource || ""}
+                  showDetails={exp.showDetails}
                   className="col-span-1"
                 />
               ))}
@@ -241,7 +250,8 @@ const Career = () => {
                   title={cert.title || "empty"}
                   description={cert.description || "empty"}
                   imageSource={cert.imageSource || ""}
-                  componentSource={cert.componentSource || ""}
+                  detailImageSource={cert.detailImageSource || ""}
+                  showDetails={cert.showDetails}
                   className="col-span-1"
                 />
               ))}

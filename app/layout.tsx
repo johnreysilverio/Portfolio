@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Portfolio of John Rey Silverio — Full Stack Developer specializing in Next.js, React, TypeScript, and modern web applications.",
+    "John Rey Silverio is a full-stack developer in the Philippines building responsive web applications with Next.js, React, TypeScript, and Node.js.",
 
   keywords: [
     "John Rey Silverio",
-    "Portfolio",
+    "John Rey Silverio portfolio",
     "Full Stack Developer",
     "Next.js",
     "React",
@@ -39,30 +39,40 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: "https://johnreysilverio.com",
+    canonical: "/",
   },
 
-  authors: [{ name: "John Rey Silverio" }],
+  authors: [{ name: "John Rey Silverio", url: "https://johnreysilverio.com" }],
   creator: "John Rey Silverio",
+  publisher: "John Rey Silverio",
+  category: "technology",
+  applicationName: "John Rey Silverio Portfolio",
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 
   openGraph: {
     title: "John Rey Silverio | Full Stack Developer",
     description:
-      "Explore projects, skills, and experience of John Rey Silverio.",
-    siteName: "John Rey Portfolio",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "John Rey Portfolio",
-      },
-    ],
+      "Explore the projects, technical skills, and professional experience of full-stack developer John Rey Silverio.",
+    siteName: "John Rey Silverio Portfolio",
+    url: "/",
     locale: "en_US",
     type: "website",
   },
@@ -71,8 +81,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "John Rey Silverio | Full Stack Developer",
     description:
-      "Modern Full Stack Developer specializing in Next.js and React.",
-    images: ["/og-image.png"],
+      "Full-stack developer in the Philippines building modern applications with Next.js, React, TypeScript, and Node.js.",
   },
 
   icons: {
